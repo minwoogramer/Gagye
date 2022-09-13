@@ -4,15 +4,14 @@ import Img from "next/image";
 interface HeadProps {}
 
 const HeaderLogo = styled.div`
-  border: none;
-  transition: 0.2s;
-  cursor: pointer;
-  :hover {
-    font-weight: 600;
-    opacity: 1;
-  }
+  color: #ffffff;
+  font-family: "Inter";
+  font-weight: 1;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
 `;
 
 export const HeadLogo: FC<HeadProps> = () => {
-  return <HeaderLogo>Syntegrate</HeaderLogo>;
+  return <HeaderLogo>Donut Gagye</HeaderLogo>;
 };

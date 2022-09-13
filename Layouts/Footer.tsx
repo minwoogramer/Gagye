@@ -3,5 +3,5 @@ import { FootWrapper } from "../components/Navigation/footer/FootWrapper.compone
 
 interface LayoutProps {}
 export const Footer: FC<LayoutProps> = () => {
-  return <FootWrapper></FootWrapper>;
+  return <FootWrapper />;
 };
