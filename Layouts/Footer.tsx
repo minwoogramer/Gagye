@@ -1,7 +1,12 @@
 import { FC } from "react";
-import { FootWrapper } from "../components/Navigation/footer/FootWrapper.component";
+import { FooterContent } from "../components/Navigation/footer/FooterContent.component";
+import { FootWrapper } from "../components/Navigation/footer/FooterWrapper.component";
 
 interface LayoutProps {}
 export const Footer: FC<LayoutProps> = () => {
-  return <FootWrapper />;
+  return (
+    <FootWrapper>
+      <FooterContent></FooterContent>
+    </FootWrapper>
+  );
 };

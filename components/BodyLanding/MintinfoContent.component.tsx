@@ -25,7 +25,6 @@ const InfoBox = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: col;
   justify-content: space-between;
   background-color: #000000;
   color: white;
@@ -34,24 +33,34 @@ const InfoBox = styled.div`
 const MintingInfo = styled.div`
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
   margin-left: 100px;
-  margin-right: 300px;
+`;
+const MintingInfoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const InfoText = styled.span`
+  width: 254px;
   font-size: 23px;
-  margin: 5px;
+  color: #fff;
+  line-height: 2;
+`;
+const InfoMintingTime = styled.span`
+  font-size: 23px;
   color: #fff;
 `;
+
 const CollectionInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: 100px;
 `;
 const SupplyInfo = styled.div`
   display: flex;
@@ -59,46 +68,49 @@ const SupplyInfo = styled.div`
   justify-content: space-around;
   border: 1px solid white;
   border-radius: 30px;
+  width: 524px;
+  height: 191px;
 `;
 const SupplyInfoBox = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid white;
 `;
 const SupplyInfoBox2 = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-left: 45px;
-  margin-right: 45px;
-  border: 1px solid white;
 `;
 const SupplyInfoVolume = styled.span`
   display: inline-flex;
   justify-content: center;
   font-size: 80px;
   height: 100px;
-  width: 100px;
-  border: 1px solid white;
+  width: 176px;
 `;
 
 const SupplyInfoName = styled.span`
-  display: inline-flex;
-  justify-content: space-around;
-
-  font-size: 23px;
-  margin-bottom: 15px;
-  border: 1px solid white;
-`;
-const SupplyInfoName2 = styled.span`
   display: flex;
+  justify-content: center;
   font-size: 23px;
-  border: 1px solid white;
+  height: 70px;
+  width: 176px;
 `;
-
+const SupplyBox = styled.div`
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  height: 70px;
+  width: 176px;
+  flex-direction: column;
+`;
+const SupplyText = styled.span`
+  margin-top: 10px;
+  font-size: 23px;
+  color: #fff;
+`;
 export const MintInfoContent: FC = () => {
   return (
     <Container>
@@ -109,11 +121,16 @@ export const MintInfoContent: FC = () => {
       <InfoBox>
         <MintingInfo>
           <InfoText>For Metaverse</InfoText>
-          <InfoText>.GLTF</InfoText>
-          <InfoText>Price : 0.02ETH</InfoText>
+          <MintingInfoBox>
+            <InfoText>.GLTF</InfoText>
+            <InfoText>Price : 0.02ETH</InfoText>
+          </MintingInfoBox>
+
           <InfoText>For Multi-purpose</InfoText>
-          <InfoText>.SKP</InfoText>
-          <InfoText>Price : 0.5ETH</InfoText>
+          <MintingInfoBox>
+            <InfoText>.SKP</InfoText>
+            <InfoText>Price : 0.5ETH</InfoText>
+          </MintingInfoBox>
         </MintingInfo>
         <CollectionInfo>
           <SupplyInfo>
@@ -125,15 +142,18 @@ export const MintInfoContent: FC = () => {
             <SupplyInfoBox2>
               <SupplyInfoName>Collection</SupplyInfoName>
               <SupplyInfoName>Supply</SupplyInfoName>
-              <SupplyInfoName2>Supply per individual</SupplyInfoName2>
+              <SupplyBox>
+                <SupplyInfoName>Supply per</SupplyInfoName>
+                <SupplyInfoName>individual</SupplyInfoName>
+              </SupplyBox>
             </SupplyInfoBox2>
           </SupplyInfo>
-          <InfoText>50 Collection for each version </InfoText>
+          <SupplyText>50 Collection for each version </SupplyText>
         </CollectionInfo>
       </InfoBox>
-      <InfoText>
+      <InfoMintingTime>
         Donut Gagye door will be opened to public the mid of Oct., 2022.
-      </InfoText>
+      </InfoMintingTime>
     </Container>
   );
 };

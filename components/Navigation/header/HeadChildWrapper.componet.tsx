@@ -9,11 +9,10 @@ const HeaderContainer = styled.div`
   background-color: #000000;
   display: flex;
   justify-content: space-between;
-  box-sizing: border-box;
   align-items: center;
-  gap: 10px;
-  max-width: 1200px;
-  width: 80%;
+  max-width: 1800px;
+  min-width: 320px;
+  width: 100%;
   height: 100%;
 `;
 export const HeadLChildWrapper: FC<ContainerProps> = ({ children }) => {

@@ -2,15 +2,16 @@ import { FC } from "react";
 import styled from "styled-components";
 
 const Btn = styled.button`
-  display: flex;
-  margin-top: 35px;
   background-color: #0350f0;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
+  border-radius: 45px;
+  width: 16rem;
+  height: 3rem;
+  font-family: "Inter";
+  font-style: normal;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
 `;
-
 export const MintBtn: FC = () => {
   return <Btn>MintBtn</Btn>;
 };

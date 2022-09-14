@@ -12,6 +12,6 @@ const Container = styled.div`
   border: 1px solid black;
 `;
 
-export const TitleContent: FC = () => {
-  return <Container>영상이 들어갈 자리입니다.</Container>;
+export const MintCard: FC = () => {
+  return <Container>NFTCard</Container>;
 };

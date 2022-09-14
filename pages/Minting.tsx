@@ -1,7 +1,8 @@
 import { NextPage } from "next";
 import styled from "styled-components";
 import { NFTCard } from "../components/BodyMinting/NFTCard.component";
-import { Header } from "./../Layouts/Header";
+import { Header } from "../Layouts/Header";
+import { BodyMinting } from "./../Layouts/BodyMinting";
 
 const MintingContainer = styled.div`
   display: flex;
@@ -14,12 +15,11 @@ const MintingContainer = styled.div`
   height: 100%;
 `;
 
-const MintingPage: NextPage = () => {
+const Minting: NextPage = () => {
   return (
     <MintingContainer>
-      <Header />
-      <NFTCard />
+      <BodyMinting />
     </MintingContainer>
   );
 };
-export default MintingPage;
+export default Minting;
