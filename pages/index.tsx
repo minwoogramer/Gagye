@@ -4,9 +4,7 @@ import styled from "styled-components";
 import { Header } from "../Layouts/Header";
 import { Footer } from "../Layouts/Footer";
 import { BodyLanding } from "../Layouts/BodyLanding";
-import Head from "next/head";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 const IndexContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -21,19 +19,16 @@ const IndexContainer = styled.div`
 const Home: NextPage = () => {
   return (
     <IndexContainer>
-      <Head>
-        {" "}
-        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap"
-          rel="stylesheet"
-        ></link>
-      </Head>
+      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin=""
+      ></link>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap"
+        rel="stylesheet"
+      ></link>
       <Header />
       <BodyLanding />
       <Footer />

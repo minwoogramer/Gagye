@@ -23,11 +23,8 @@ export default class MyDocument extends Document {
           <Html>
             {initialProps.styles}
             {sheet.getStyleElement()}
-
-            <body>
-              <Main />
-              <NextScript />
-            </body>
+            <Main />
+            <NextScript />
           </Html>
         ),
       };

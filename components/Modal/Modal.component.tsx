@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-
-const Modal = ({ show, onClose, children, title }) => {
+interface props {
+  show: boolean;
+  onClose: () => void;
+}
+const Modal = ({ show, onClose }: props): ReactElement | null => {
   const [isBrowser, setIsBrowser] = useState(false);
 
   useEffect(() => {
     setIsBrowser(true);
   }, []);
 
-  const handleCloseClick = (e) => {
+  const handleCloseClick = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     onClose();
   };
@@ -22,17 +25,14 @@ const Modal = ({ show, onClose, children, title }) => {
             x
           </a>
         </StyledModalHeader>
-        {title && <StyledModalTitle>{title}</StyledModalTitle>}
-        <StyledModalBody>{children}</StyledModalBody>
+        <StyledModalBody></StyledModalBody>
       </StyledModal>
     </StyledModalOverlay>
   ) : null;
 
   if (isBrowser) {
-    return ReactDOM.createPortal(
-      modalContent,
-      document.getElementById("modal-root")
-    );
+    const el: any = document.getElementById("modal-root");
+    return ReactDOM.createPortal(modalContent, el);
   } else {
     return null;
   }

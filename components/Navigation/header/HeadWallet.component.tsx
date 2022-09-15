@@ -1,10 +1,10 @@
-import { FC, InputHTMLAttributes, useEffect, useState } from "react";
+import { FC, useEffect, useState, useLayoutEffect } from "react";
 import styled from "styled-components";
 import {
   ConnectWallet,
   DisconnectWallet,
 } from "../../../utils/Wallet/connectWallet";
-import { atom, useRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 import { WalletInfo } from "../../../utils/Atoms/atoms";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
@@ -35,10 +35,9 @@ const Btn = styled.button`
 `;
 export const HeadWallet: FC = () => {
   const [account, setAccount] = useRecoilState(WalletInfo);
-  const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isLoading == true) {
       if (account != "") {
         toast.success("!🦄 Your Wallet Connected", {
@@ -60,14 +59,15 @@ export const HeadWallet: FC = () => {
         router.push("/");
       }
     }
-  }, [isLoading]);
+  }, [account]);
   return (
     <ConnectWalletContainer>
       {account != "" ? (
         <Accounts
           onClick={() => {
             DisconnectWallet(setAccount);
-            console.log("지갑연결이 끊겼습니당~");
+            console.log("지갑연결끊기");
+            setIsLoading(false);
           }}
         >
           {account.slice(0, 6)}...
@@ -78,6 +78,7 @@ export const HeadWallet: FC = () => {
           onClick={() => {
             ConnectWallet(setAccount);
             setIsLoading(true);
+            console.log(isLoading, "연결");
           }}
         >
           Connect Wallet
