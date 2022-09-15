@@ -1,4 +1,4 @@
-import Document from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import { DocumentContext } from "next/document";
 export default class MyDocument extends Document {
@@ -20,10 +20,15 @@ export default class MyDocument extends Document {
       return {
         ...initialProps,
         styles: (
-          <>
+          <Html>
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </>
+
+            <body>
+              <Main />
+              <NextScript />
+            </body>
+          </Html>
         ),
       };
     } finally {

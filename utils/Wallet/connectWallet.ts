@@ -1,9 +1,6 @@
-import { useEffect, useState, useCallback } from 'react'
 import { ethers, providers } from 'ethers'
 import Web3Modal from 'web3modal'
 import WalletConnectProvider from '@walletconnect/web3-provider'
-import { atom, useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
-import { WalletInfo } from '../Atoms/atoms'
 
 const providerOptions = {
   walletconnect: {
@@ -25,13 +22,13 @@ export const ConnectWallet = async (setAccount: {
     providerOptions,
     theme: 'dark',
   })
-  web3Modal.updateTheme('dark')
   try {
     const provider = await web3Modal.connect()
     const library = new ethers.providers.Web3Provider(provider)
     const accounts = await library.listAccounts()
     if (accounts) {
       setAccount(accounts[0])
+      console.log(accounts[0])
     }
   } catch (error) {
     console.log(error)

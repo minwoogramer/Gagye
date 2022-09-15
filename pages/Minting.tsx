@@ -1,6 +1,5 @@
 import { NextPage } from "next";
 import styled from "styled-components";
-import { NFTCard } from "../components/BodyMinting/NFTCard.component";
 import { Header } from "../Layouts/Header";
 import { BodyMinting } from "./../Layouts/BodyMinting";
 

@@ -9,7 +9,7 @@ const Container = styled.div`
   height: 1620px;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
 `;
 
 interface ContainerProps {

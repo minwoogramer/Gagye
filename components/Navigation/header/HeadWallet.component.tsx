@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes } from "react";
+import { FC, InputHTMLAttributes, useEffect, useState } from "react";
 import styled from "styled-components";
 import {
   ConnectWallet,
@@ -7,6 +7,8 @@ import {
 import { atom, useRecoilState } from "recoil";
 import { WalletInfo } from "../../../utils/Atoms/atoms";
 import { useRouter } from "next/router";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const ConnectWalletContainer = styled.div``;
 const Accounts = styled.button`
   background-color: #0350f0;
@@ -33,13 +35,39 @@ const Btn = styled.button`
 `;
 export const HeadWallet: FC = () => {
   const [account, setAccount] = useRecoilState(WalletInfo);
+  const [showModal, setShowModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  useEffect(() => {
+    if (isLoading == true) {
+      if (account != "") {
+        toast.success("!🦄 Your Wallet Connected", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        router.push("Minting");
+        //replace로 바꿔야함
+        console.log("연결성공");
+      }
+    } else {
+      if (account == "") {
+        router.push("/");
+      }
+    }
+  }, [isLoading]);
   return (
     <ConnectWalletContainer>
       {account != "" ? (
         <Accounts
           onClick={() => {
             DisconnectWallet(setAccount);
+            console.log("지갑연결이 끊겼습니당~");
           }}
         >
           {account.slice(0, 6)}...
@@ -49,9 +77,7 @@ export const HeadWallet: FC = () => {
         <Btn
           onClick={() => {
             ConnectWallet(setAccount);
-            if (account) {
-              router.replace("/Minting");
-            }
+            setIsLoading(true);
           }}
         >
           Connect Wallet
