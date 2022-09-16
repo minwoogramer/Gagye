@@ -6,8 +6,6 @@ const Btn = styled.button`
   border-radius: 45px;
   width: 16rem;
   height: 3rem;
-  font-family: "Inter";
-  font-style: normal;
   color: #fff;
   font-size: 1.2rem;
   cursor: pointer;
