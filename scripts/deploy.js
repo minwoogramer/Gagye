@@ -15,9 +15,7 @@ async function main() {
 
   const Lock = await hre.ethers.getContractFactory("Lock");
   const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
-  const Test = await hre.ethers.getContractFactory("testERC721AContract");
-  const test = await Test.deploy(unlockTime, { value: lockedAmount });
-  await test.deployed();
+
   await lock.deployed();
 
   console.log(

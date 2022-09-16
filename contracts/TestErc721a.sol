@@ -52,7 +52,8 @@ contract testERC721AContract is
     bool public testWithDraw = false;
     bool public testReserved = false;
 
-    constructor() ERC721A("Test", "TESTING") {}
+    constructor(string memory _name,
+        string memory _symbol) ERC721A(_name, _symbol) {}
 
     /// @dev === Minting Function - Input ====
     function mintWhitelist(
@@ -358,6 +359,8 @@ contract testERC721AContract is
         );
         _;
     }
+    //tokenId 체크해서 다차면 민팅해주게됌
+    //가스비를 아끼게 해주는 함수
 
     modifier isSaleActive(bool active) {
         require(active, "Sale must be active to mint");
