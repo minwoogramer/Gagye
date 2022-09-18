@@ -13,8 +13,8 @@ const ConnectWalletContainer = styled.div``;
 const Accounts = styled.button`
   background-color: #0350f0;
   border-radius: 45px;
-  width: 16rem;
-  height: 3rem;
+  width: 18rem;
+  height: 4rem;
   font-family: "Inter";
   font-style: normal;
   color: #fff;
@@ -25,8 +25,8 @@ const Accounts = styled.button`
 const Btn = styled.button`
   background-color: #0350f0;
   border-radius: 45px;
-  width: 16rem;
-  height: 3rem;
+  width: 18rem;
+  height: 4rem;
   font-family: "Inter";
   font-style: normal;
   color: #fff;

@@ -5,7 +5,7 @@ interface HeadProps {}
 
 const HeaderLogo = styled.div`
   color: #ffffff;
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
   margin-bottom: 1rem;
 `;

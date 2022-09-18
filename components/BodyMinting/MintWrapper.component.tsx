@@ -1,15 +1,19 @@
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
+import { atom } from "recoil";
 
 const Container = styled.div`
   display: flex;
-  margin-top: 35px;
-  background-color: #ebecea;
-  width: 1800px;
-  height: 1620px;
+  margin-top: 5%;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  max-width: 1800px;
+  height: 900px;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
+  box-sizing: border-box;
 `;
 
 interface ContainerProps {
