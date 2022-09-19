@@ -9,6 +9,7 @@ import { WalletInfo } from "../../../utils/Atoms/atoms";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { info } from "console";
 const ConnectWalletContainer = styled.div``;
 const Accounts = styled.button`
   background-color: #0350f0;
@@ -21,6 +22,10 @@ const Accounts = styled.button`
   font-weight: 100;
   font-size: 1.2rem;
   cursor: pointer;
+  :hover {
+    transition: 0.2s;
+    opacity: 0.8;
+  }
 `;
 const Btn = styled.button`
   background-color: #0350f0;
@@ -32,17 +37,21 @@ const Btn = styled.button`
   color: #fff;
   font-size: 1.2rem;
   cursor: pointer;
+  :hover {
+    transition: 0.2s;
+    opacity: 0.8;
+  }
 `;
 export const HeadWallet: FC = () => {
   const [account, setAccount] = useRecoilState(WalletInfo);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (isLoading == true) {
-      if (account != "") {
-        toast.success("!🦄 Your Wallet Connected", {
+      const showToast = () => {
+        toast.info("!🦄 Your Wallet Connected", {
           position: "top-center",
-          autoClose: 5000,
+          autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -50,6 +59,12 @@ export const HeadWallet: FC = () => {
           progress: undefined,
           theme: "colored",
         });
+      };
+      if (account != "") {
+        setTimeout(() => {
+          showToast();
+        }, 500);
+
         router.push("Minting");
         //replace로 바꿔야함
         console.log("연결성공");

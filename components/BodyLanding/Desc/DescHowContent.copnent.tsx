@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  margin-top: 35px;
   background-color: #000000;
   color: #fff;
   width: 100%;
@@ -16,6 +15,11 @@ const Container = styled.div`
 const Title = styled.span`
   font-size: 40px;
   margin: 0;
+`;
+const TitleBold = styled.span`
+  font-size: 40px;
+  margin: 0;
+  font-weight: 600;
 `;
 const Desc = styled.span`
   font-size: 23px;

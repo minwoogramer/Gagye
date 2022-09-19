@@ -4,13 +4,17 @@ import Img from "next/image";
 interface FooterProps {}
 
 const FooterContentContainer = styled.div`
-  color: #ffffff;
-  width: 80%;
-`;
-const FooterContentBox = styled.div`
-  font-size: 15px;
   display: flex;
   flex-direction: column;
+  color: #ffffff;
+  width: 100%;
+`;
+const FooterContentBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 15px;
+  margin: 0;
 `;
 const FooterContentBox2 = styled.div`
   display: flex;
@@ -29,7 +33,7 @@ export const FooterContent: FC<FooterProps> = () => {
         width={136}
         height={38.91}
         alt="logo"
-        layout="intrinsic"
+        layout="fixed"
       ></Img>
       <FooterContentBox>
         <FooterContentBox2>

@@ -1,4 +1,17 @@
+const { task } = require("hardhat/config");
+const dotenv = require("dotenv");
+
+dotenv.config();
 require("@nomicfoundation/hardhat-toolbox");
+require("@nomiclabs/hardhat-waffle");
+
+task("account", "Prints the list of accounts", async (taskArgs, hre) => {
+  const accounts = await hre.ethers.getSigner();
+
+  for (const account of accounts) {
+    console.log(account.address);
+  }
+});
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -12,10 +25,8 @@ module.exports = {
     //   accounts: [keyData],
     // },
     ropsten: {
-      url: `https://ropsten.infura.io/v3/f205e2d61653432c996724150f59c1e3`,
-      accounts: [
-        `238d199217a32c8829d91dde7e0b15dd6d724fd7c5367e41973441f180e0a893`,
-      ],
+      url: process.env.ROPSTEN_RPC_URL,
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
   solidity: {

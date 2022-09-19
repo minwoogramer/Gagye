@@ -28,6 +28,13 @@ const InfoBox = styled.div`
   justify-content: space-between;
   background-color: #000000;
   color: white;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+  }
 `;
 
 const MintingInfo = styled.div`
@@ -36,20 +43,38 @@ const MintingInfo = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  margin-left: 100px;
+  margin-left: 5%;
+  line-height: 3;
+  @media screen and (max-width: 1000px) {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    line-height: 1;
+  }
 `;
+//For Metaverse,  For Multi-purpose ,Price, 들어가는 컨테이너
 const MintingInfoBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  line-height: 1.2;
 `;
-
+//For Metaverse,  For Multi-purpose ,Price, 들어가는 컨테이너2
 const InfoText = styled.span`
+  display: flex;
+  justify-content: center;
   width: 254px;
   font-size: 23px;
   color: #fff;
-  line-height: 2;
+  @media screen and (max-width: 1000px) {
+    display: flex;
+    justify-content: left;
+    width: 115px;
+    font-size: 20px;
+  }
 `;
+//For Metaverse,  For Multi-purpose ,Price, 텍스트
 const InfoMintingTime = styled.span`
   font-size: 23px;
   color: #fff;
@@ -60,7 +85,10 @@ const CollectionInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 100px;
+  margin-right: 10%;
+  @media screen and (max-width: 1000px) {
+    margin-top: 5%;
+  }
 `;
 const SupplyInfo = styled.div`
   display: flex;

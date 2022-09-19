@@ -26,7 +26,10 @@ describe("BadgeToken contract", function () {
       await token721.mintWhitelist(address1);
       expect(await token721.ownerOf(1)).to.equal(address1);
 
-      expect(await token721.balanceOf(address1)).to.equal(1);
+      await token721.mintWhitelist(address1);
+      expect(await token721.ownerOf(2)).to.equal(address1);
+
+      expect(await token721.balanceOf(address1)).to.equal(2);
     });
   });
 });

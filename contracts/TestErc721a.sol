@@ -28,9 +28,9 @@ contract testERC721AContract is
     /// @dev === WHITELIST CONFIGURATION ===
     bytes32 public whitelistMerkleRoot;
     mapping(address => uint256) private _whitelistMintTracker;
-
+    //addrss 별로 고유한 Number가 나온다
     /// @dev === PRICE CONFIGURATION ===
-    uint256 public constant WHITELIST_PRICE = 0.1691 ether;
+    uint256 public constant WHITELIST_PRICE = 0.02 ether;
     uint256 public royalty = 50; // 75 is divided by 10 in the royalty info function to make 7.5%
 
     /// @dev === RESERVE/DROPS CONFIGURATION ===

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { MintBtn } from "../components/BodyMinting/MintBtn.component";
+import { MintContent } from "../components/BodyMinting/MintContent.component";
 import { MintFooter } from "../components/BodyMinting/MintFooter.component";
 import { MintWrapper } from "../components/BodyMinting/MintWrapper.component";
 import { Header } from "./Header";
@@ -9,7 +9,7 @@ export const BodyMinting: FC<LayoutProps> = () => {
   return (
     <MintWrapper>
       <Header />
-      <MintBtn />
+      <MintContent />
       <MintFooter />
     </MintWrapper>
   );

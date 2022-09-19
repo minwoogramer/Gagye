@@ -7,12 +7,12 @@ interface ContainerProps {
 const FootContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: #000000;
   height: 175px;
-  width: 100%;
+  width: 80%;
+  max-width: 1200px;
   margin-top: 30px;
-  padding-left: 10%;
-  padding-right: 10%;
   color: white;
 `;
 

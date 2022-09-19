@@ -1,6 +1,8 @@
 import { FC } from "react";
 import styled from "styled-components";
-
+import { MintingStart } from "../../utils/Minting/GLTFMinting";
+import { useRecoilValue } from "recoil";
+import { WalletInfo } from "../../utils/Atoms/atoms";
 const MintingBoxContainer = styled.div`
   display: flex;
   background-color: black;
@@ -94,6 +96,10 @@ const Btn = styled.button`
   font-family: "Inter", sans-serif;
   font-style: normal;
   cursor: pointer;
+  :hover {
+    transition: 0.2s;
+    opacity: 0.8;
+  }
 `;
 
 const WhenDateBox = styled.div`
@@ -109,7 +115,9 @@ const WhenDateTitle = styled.span`
   font-size: 23px;
 `;
 
-export const MintBtn: FC = () => {
+export const MintContent: FC = () => {
+  const address: any = useRecoilValue(WalletInfo);
+
   return (
     <MintingBoxContainer>
       <MintingBoxChildContainer>
@@ -122,7 +130,13 @@ export const MintBtn: FC = () => {
             <SupplyBox>
               <SupplyText>3 / 50</SupplyText>
               <MintingFee>0.02ETH + Gas</MintingFee>
-              <Btn>Mint for Metaverse</Btn>
+              <Btn
+                onClick={async () => {
+                  await MintingStart(address);
+                }}
+              >
+                Mint for Metaverse
+              </Btn>
             </SupplyBox>
           </MetaverseBox>
           <MultiBox>
