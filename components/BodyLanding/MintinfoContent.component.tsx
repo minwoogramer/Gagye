@@ -76,6 +76,7 @@ const InfoText = styled.span`
 `;
 //For Metaverse,  For Multi-purpose ,Price, 텍스트
 const InfoMintingTime = styled.span`
+  height: 100%;
   font-size: 23px;
   color: #fff;
 `;

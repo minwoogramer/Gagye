@@ -9,7 +9,7 @@ import { WalletInfo } from "../../../utils/Atoms/atoms";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { info } from "console";
+import Web3Modal from "web3modal";
 const ConnectWalletContainer = styled.div``;
 const Accounts = styled.button`
   background-color: #0350f0;
@@ -45,6 +45,7 @@ const Btn = styled.button`
 export const HeadWallet: FC = () => {
   const [account, setAccount] = useRecoilState(WalletInfo);
   const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const router = useRouter();
   useEffect(() => {
     if (isLoading == true) {
@@ -77,10 +78,15 @@ export const HeadWallet: FC = () => {
   }, [account]);
   return (
     <ConnectWalletContainer>
+      <Btn onClick={() => setShowModal(true)}></Btn>
       {account != "" ? (
         <Accounts
           onClick={() => {
-            DisconnectWallet(setAccount);
+            const web3Modal = new Web3Modal({
+              cacheProvider: true,
+              theme: "dark",
+            });
+            web3Modal.toggleModal();
             console.log("지갑연결끊기");
             setIsLoading(false);
           }}

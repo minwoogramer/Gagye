@@ -25,6 +25,7 @@ export default class MyDocument extends Document {
             {sheet.getStyleElement()}
             <Main />
             <NextScript />
+            <div id="modal-root"></div>
           </Html>
         ),
       };

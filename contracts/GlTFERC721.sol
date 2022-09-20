@@ -46,7 +46,7 @@ contract GLTFNFT is ERC721, Ownable{
 
     function withdraw() external onlyOwner{
         (bool success, ) = withdrawWallet.call{value: address(this).balance }('');
-        //sucess graped 하여서 failed check
+        //success graped 하여서 failed check
         require(success, 'withdraw failed' );
     }
 

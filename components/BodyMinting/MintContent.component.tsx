@@ -14,7 +14,7 @@ const MintingBoxContainer = styled.div`
   max-height: 659px;
   border: 1px solid white;
   color: white;
-  margin-top: 5%;
+  margin-top: 10%;
 `;
 const MintingBoxChildContainer = styled.div`
   display: flex;
@@ -111,7 +111,7 @@ const WhenDateBox = styled.div`
   justify-content: center;
 `;
 const WhenDateTitle = styled.span`
-  margin-top: 5%;
+  margin: 5%;
   font-size: 23px;
 `;
 
