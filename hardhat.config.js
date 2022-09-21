@@ -1,6 +1,6 @@
 const { task } = require("hardhat/config");
 const dotenv = require("dotenv");
-
+require("hardhat-gas-reporter");
 dotenv.config();
 require("@nomicfoundation/hardhat-toolbox");
 require("@nomiclabs/hardhat-waffle");
@@ -37,5 +37,11 @@ module.exports = {
         runs: 200,
       },
     },
+  },
+  gasReporter: {
+    enabled: true,
+    outputFile: "gas-report.txt",
+    currency: "USD",
+    gasPrice: 21,
   },
 };

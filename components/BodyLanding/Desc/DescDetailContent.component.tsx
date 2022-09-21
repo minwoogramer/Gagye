@@ -43,28 +43,16 @@ export const DescDetailContent: FC = () => {
       <DescBox>
         <Desc>
           Desserts make our inner child happy. Donut Gagye are a bunch of
-          flavorful happiness.
+          flavorful happiness. Donut Gagye releases a significant amount of
+          serotonin and suppresses depression and anxiety. Nevertheless, it can
+          be difficult not to stress in modern society, as this is certainly an
+          unavoidable part nowadays. Therefore, happiness should be one of the
+          most important values to consider, and our Donut Gagye NFT can be a
+          key to making your web 3.0 world a more valuable memory. Let us find
+          out happier memories of your childhood through our favorite foods.
+          moments when you ate doughnuts. Recall happy So, what would you need?
+          Donut Gagye, of course!
         </Desc>
-        <Desc>
-          Donut Gagye releases a significant amount of serotonin and suppresses
-          depression and anxiety.
-        </Desc>
-        <Desc>
-          Nevertheless, it can be difficult not to stress in modern society, as
-          this is certainly an unavoidable part nowadays.
-        </Desc>
-        <Desc>
-          Therefore, happiness should be one of the most important values to
-          consider, and our Donut Gagye NFT can be a key to making your web 3.0
-          world a more valuable memory.
-        </Desc>
-        <Desc>moments when you ate doughnuts.</Desc>
-        <Desc>
-          Let us find out happier memories of your childhood through our
-          favorite foods.
-        </Desc>
-        <Desc>Recall happy So, what would you need?</Desc>
-        <Desc>Donut Gagye, of course!</Desc>
       </DescBox>
     </Container>
   );

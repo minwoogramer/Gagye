@@ -9,7 +9,7 @@ import { WalletInfo } from "../../../utils/Atoms/atoms";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Web3Modal from "web3modal";
+import { Modals } from "./../../Modal/Modal.component";
 const ConnectWalletContainer = styled.div``;
 const Accounts = styled.button`
   background-color: #0350f0;
@@ -47,6 +47,14 @@ export const HeadWallet: FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const router = useRouter();
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   useEffect(() => {
     if (isLoading == true) {
       const showToast = () => {
@@ -78,21 +86,22 @@ export const HeadWallet: FC = () => {
   }, [account]);
   return (
     <ConnectWalletContainer>
-      <Btn onClick={() => setShowModal(true)}></Btn>
       {account != "" ? (
         <Accounts
           onClick={() => {
-            const web3Modal = new Web3Modal({
-              cacheProvider: true,
-              theme: "dark",
-            });
-            web3Modal.toggleModal();
-            console.log("지갑연결끊기");
+            openModal();
             setIsLoading(false);
+            console.log(account);
           }}
         >
           {account.slice(0, 6)}...
           {account.slice(account.length - 5, account.length)}
+          <Modals
+            show={showModal}
+            onClose={setShowModal}
+            setAccount={setAccount}
+            accounts={account}
+          ></Modals>
         </Accounts>
       ) : (
         <Btn

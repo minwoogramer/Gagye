@@ -1,15 +1,9 @@
 import { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../styles/theme";
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from "recoil";
+import { RecoilRoot } from "recoil";
 import GlobalStyle from "../styles/global";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function App({ Component, pageProps }: AppProps) {
   return (

@@ -28,8 +28,8 @@ const InfoBox = styled.div`
   justify-content: space-between;
   background-color: #000000;
   color: white;
-
-  @media screen and (max-width: 1000px) {
+  margin: 50px;
+  @media screen and (max-width: 1370px) {
     flex-direction: column;
     justify-content: center;
     display: flex;
@@ -42,16 +42,26 @@ const MintingInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-  margin-left: 5%;
   line-height: 3;
-  @media screen and (max-width: 1000px) {
+  margin-right: 50px;
+  margin-left: 50px;
+  padding-bottom: 45px;
+
+  @media screen and (max-width: 1370px) {
     flex-direction: row;
     align-items: center;
     display: flex;
     margin: 0 auto;
     line-height: 1;
   }
+`;
+const MintingInfoContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+const MintingInfoParentBox = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 //For Metaverse,  For Multi-purpose ,Price, 들어가는 컨테이너
 const MintingInfoBox = styled.div`
@@ -64,15 +74,9 @@ const MintingInfoBox = styled.div`
 const InfoText = styled.span`
   display: flex;
   justify-content: center;
-  width: 254px;
+  width: 230px;
   font-size: 23px;
   color: #fff;
-  @media screen and (max-width: 1000px) {
-    display: flex;
-    justify-content: left;
-    width: 115px;
-    font-size: 20px;
-  }
 `;
 //For Metaverse,  For Multi-purpose ,Price, 텍스트
 const InfoMintingTime = styled.span`
@@ -86,7 +90,6 @@ const CollectionInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 10%;
   @media screen and (max-width: 1000px) {
     margin-top: 5%;
   }
@@ -149,17 +152,22 @@ export const MintInfoContent: FC = () => {
       </Title>
       <InfoBox>
         <MintingInfo>
-          <InfoText>For Metaverse</InfoText>
-          <MintingInfoBox>
-            <InfoText>.GLTF</InfoText>
-            <InfoText>Price : 0.02ETH</InfoText>
-          </MintingInfoBox>
-
-          <InfoText>For Multi-purpose</InfoText>
-          <MintingInfoBox>
-            <InfoText>.SKP</InfoText>
-            <InfoText>Price : 0.5ETH</InfoText>
-          </MintingInfoBox>
+          <MintingInfoContainer>
+            <MintingInfoParentBox>
+              <InfoText>For Metaverse</InfoText>
+              <MintingInfoBox>
+                <InfoText>.GLTF</InfoText>
+                <InfoText>Price : 0.02ETH</InfoText>
+              </MintingInfoBox>
+            </MintingInfoParentBox>
+            <MintingInfoParentBox>
+              <InfoText>For Multi-purpose</InfoText>
+              <MintingInfoBox>
+                <InfoText>.SKP</InfoText>
+                <InfoText>Price : 0.5ETH</InfoText>
+              </MintingInfoBox>
+            </MintingInfoParentBox>
+          </MintingInfoContainer>
         </MintingInfo>
         <CollectionInfo>
           <SupplyInfo>

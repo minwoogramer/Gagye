@@ -35,11 +35,8 @@ export const FlowContent: FC = () => {
       <Title>Your Donut Gagye can be utilized for the real world.</Title>
       <Desc>
         Each of our models fabricated by architects contains a package of an
-        original SketchUp file.
-      </Desc>
-      <Desc>
-        The users can not only utilize it in the real world but also covert it
-        to another file formats for their own uses.
+        original SketchUp file. The users can not only utilize it in the real
+        world but also covert it to another file formats for their own uses.
       </Desc>
       <FlowBox>Flow</FlowBox>
     </Container>

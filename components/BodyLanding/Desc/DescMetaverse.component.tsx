@@ -64,27 +64,16 @@ export const DescMetaverseContent: FC = () => {
       <DescBox>
         <Desc>
           Dough huts can take you to multiple virtual worlds to play around and
-          invite your friends to have fun.
-        </Desc>
-        <Desc>Why not?</Desc>
-        <Desc>
-          You can even start your own brand’s dream virtual world doughnut café
-          and do a lot more in Metaverse.
-        </Desc>
-        <Desc>
-          Dough-Hut is a dessert factory with beautifully detailed interiors,
-          that are just perfect for the Metaverse platforms.
-        </Desc>
-        <Desc>
-          Each of our models fabricated by architects contains a package of
+          invite your friends to have fun. Why not? You can even start your own
+          brand’s dream virtual world doughnut café and do a lot more in
+          Metaverse. Dough-Hut is a dessert factory with beautifully detailed
+          interiors, that are just perfect for the Metaverse platforms. Each of
+          our models fabricated by architects contains a package of
           high-fidelity 3D files and the required model data to build in both
-          the virtual and real world.
+          the virtual and real world. Let’s dunk into our favourite doughnuts in
+          the metaverse. Take your favourite dough hut from virtual and build it
+          real. Yes, it’s possible with our NFT.
         </Desc>
-        <Desc>Let’s dunk into our favourite doughnuts in the metaverse.</Desc>
-        <Desc>
-          Take your favourite dough hut from virtual and build it real.
-        </Desc>
-        <Desc> Yes, it’s possible with our NFT.</Desc>
       </DescBox>
 
       <FlowBox>
