@@ -1,7 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { DisconnectWallet } from "../../utils/Wallet/connectWallet";
+
+const Container = styled.div`
+  position: fixed;
+  top:0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.2);
+  z-index: 99;
+`
+
 const ModalContainer = styled.div`
 width: 500px;
 height: 300px;
@@ -55,7 +66,6 @@ cursor: pointer;
   }
 
 `
-
 const Wallet = styled.span`
 font-weight: 600;
 color: black;
@@ -87,31 +97,24 @@ align-items: center;
 `
 
 
-export const Modals = ({show, onClose,setAccount, accounts}) => {
+export const Modals = ({show,closeModal,setAccount, accounts}) => {
   const [isBrowser, setIsBrowser] = useState(false);
-
-
   useEffect(() => {
     setIsBrowser(true);
   }, []);
-  const handleCloseClick = (e) => {
-    e.preventDefault();
-    onClose(false);
-  };
+
+ 
 
   const modalContent = show ? (
+    <Container onClick={()=>{closeModal()}}>
     <ModalContainer>
-      < ModalWrapper> 
+      <ModalWrapper> 
       <ModalHead>
       <TitleText>
           Connected as
-        </TitleText>
-        <X onClick={handleCloseClick}>
-          X
-        </X>
+        </TitleText>      
         </ModalHead> 
       <TitleContent>
-        
       <Wallet>
         {accounts}
       </Wallet>
@@ -123,6 +126,7 @@ export const Modals = ({show, onClose,setAccount, accounts}) => {
       </BtnContainer>
       </ModalWrapper>
     </ModalContainer>
+    </Container>
   ) :null;
 
   if(isBrowser) {

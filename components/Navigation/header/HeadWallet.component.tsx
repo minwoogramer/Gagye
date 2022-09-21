@@ -1,4 +1,4 @@
-import { FC, useEffect, useState, useLayoutEffect } from "react";
+import { FC, useEffect, useState, useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
 import {
   ConnectWallet,
@@ -53,8 +53,8 @@ export const HeadWallet: FC = () => {
   };
   const closeModal = () => {
     setShowModal(false);
+    console.log(showModal);
   };
-
   useEffect(() => {
     if (isLoading == true) {
       const showToast = () => {
@@ -84,6 +84,7 @@ export const HeadWallet: FC = () => {
       }
     }
   }, [account]);
+
   return (
     <ConnectWalletContainer>
       {account != "" ? (
@@ -96,12 +97,6 @@ export const HeadWallet: FC = () => {
         >
           {account.slice(0, 6)}...
           {account.slice(account.length - 5, account.length)}
-          <Modals
-            show={showModal}
-            onClose={setShowModal}
-            setAccount={setAccount}
-            accounts={account}
-          ></Modals>
         </Accounts>
       ) : (
         <Btn
@@ -113,6 +108,14 @@ export const HeadWallet: FC = () => {
         >
           Connect Wallet
         </Btn>
+      )}
+      {showModal && (
+        <Modals
+          show={showModal}
+          closeModal={closeModal}
+          setAccount={setAccount}
+          accounts={account}
+        ></Modals>
       )}
     </ConnectWalletContainer>
   );
