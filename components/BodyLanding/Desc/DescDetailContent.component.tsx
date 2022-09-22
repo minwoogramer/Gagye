@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-
+import Img from "next/image";
 const Container = styled.div`
   display: flex;
   background-color: #000000;
@@ -11,24 +11,22 @@ const Container = styled.div`
   justify-content: center;
   border: 1px solid black;
   line-height: 2;
-  margin-top: 10%;
+  margin-top: 5%;
 `;
 const Title = styled.span`
   font-size: 40px;
   margin: 0;
 `;
-const TitleBold = styled.span`
-  font-size: 40px;
-  margin: 0;
-  font-weight: 600;
+
+const ImgBox = styled.div`
+  margin-top: 5%;
 `;
 const DescBox = styled.div`
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 20%;
   justify-content: flex-start;
   flex-direction: column;
-  margin: 25px 0px;
 `;
 const Desc = styled.span`
   font-size: 23px;
@@ -54,6 +52,16 @@ export const DescDetailContent: FC = () => {
           Donut Gagye, of course!
         </Desc>
       </DescBox>
+      <ImgBox>
+        <Img
+          src="/Images/AboutDonut.png"
+          width={1200}
+          height={535}
+          alt="video"
+          layout="intrinsic"
+          objectFit="cover"
+        />
+      </ImgBox>
     </Container>
   );
 };

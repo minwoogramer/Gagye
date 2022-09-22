@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-
+import Img from "next/image";
 const Container = styled.div`
   margin-top: 30px;
   display: flex;
@@ -41,7 +41,7 @@ const Desc = styled.span`
   margin: 0;
   line-height: 1.5;
 `;
-const DescBold = styled.span``;
+
 const FlowBox = styled.div`
   display: flex;
   flex-direction: row;
@@ -55,6 +55,7 @@ const Box = styled.div`
   height: 100%;
   border: 1px solid wheat;
 `;
+
 export const DescMetaverseContent: FC = () => {
   return (
     <Container>
@@ -77,7 +78,16 @@ export const DescMetaverseContent: FC = () => {
       </DescBox>
 
       <FlowBox>
-        <Box>Image of Metaverse</Box>
+        <Box>
+          <Img
+            src="/Images/ImageOfMetaverse1.svg"
+            width={1200}
+            height={700}
+            alt="video"
+            layout="intrinsic"
+            objectFit="cover"
+          />
+        </Box>
         <Box>Flow</Box>
       </FlowBox>
     </Container>
