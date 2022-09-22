@@ -8,7 +8,6 @@ import { DescHowContent } from "../components/BodyLanding/Desc/DescHowContent.co
 import { SampleContent } from "../components/BodyLanding/SampleContent.component";
 import { DescMetaverseContent } from "../components/BodyLanding/Desc/DescMetaverse.component";
 import { FlowContent } from "../components/BodyLanding/FlowContent.component";
-
 interface LayoutProps {}
 
 export const BodyLanding: FC<LayoutProps> = () => {

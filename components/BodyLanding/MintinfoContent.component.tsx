@@ -69,6 +69,9 @@ const MintingInfoBox = styled.div`
   flex-direction: column;
   align-items: center;
   line-height: 1.2;
+  @media screen and (max-width: 1370px) {
+    line-height: 2;
+  }
 `;
 //For Metaverse,  For Multi-purpose ,Price, 들어가는 컨테이너2
 const InfoText = styled.span`

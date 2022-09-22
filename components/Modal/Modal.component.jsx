@@ -16,7 +16,9 @@ const Container = styled.div`
 const ModalContainer = styled.div`
 width: 500px;
 height: 300px;
+word-break: break-all;
 position:fixed;
+padding: 25px;
 top:30%; 
 left:40%;
 box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px, rgba(0,0,0,0.5) 2px 2px 3px 3px;
@@ -24,6 +26,10 @@ z-index : 900;
 background-color: #ffffffe1;
 border-radius: 25px;
 border:2px solid #e7e7e7;
+@media screen and (max-width: 1000px){
+width: 250px;
+height: 350px;
+}
 `
 const ModalWrapper =styled.div`
 display: flex;
@@ -102,8 +108,6 @@ export const Modals = ({show,closeModal,setAccount, accounts}) => {
   useEffect(() => {
     setIsBrowser(true);
   }, []);
-
- 
 
   const modalContent = show ? (
     <Container onClick={()=>{closeModal()}}>

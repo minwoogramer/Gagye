@@ -1,7 +1,8 @@
 import { FC } from "react";
 import styled from "styled-components";
-
+import Img from "next/image";
 const Container = styled.div`
+  margin-top: 5%;
   display: flex;
   background-color: #ebecea;
   width: 100%;
@@ -12,5 +13,15 @@ const Container = styled.div`
 `;
 
 export const TitleContent: FC = () => {
-  return <Container>영상이 들어갈 자리입니다.</Container>;
+  return (
+    <Container>
+      <Img
+        src="/Images/VIDEO (With Realistic View).png"
+        width={2000}
+        height={800}
+        alt="video"
+        layout="fixed"
+      />
+    </Container>
+  );
 };
