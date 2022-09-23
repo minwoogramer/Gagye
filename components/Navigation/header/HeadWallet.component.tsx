@@ -1,9 +1,6 @@
 import { FC, useEffect, useState, useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
-import {
-  ConnectWallet,
-  DisconnectWallet,
-} from "../../../utils/Wallet/connectWallet";
+import { ConnectWallet } from "../../../utils/Wallet/connectWallet";
 import { useRecoilState } from "recoil";
 import { WalletInfo } from "../../../utils/Atoms/atoms";
 import { useRouter } from "next/router";
