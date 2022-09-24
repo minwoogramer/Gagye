@@ -137,9 +137,9 @@ export const MintContent: FC = () => {
               <SupplyText>50 / 50</SupplyText>
               <MintingFee>0.02ETH + Gas</MintingFee>
               <Btn
-                onClick={async () => {
-                  await MintingStart(address);
-                }}
+              // onClick={async () => {
+              //   await MintingStart(address);
+              // }}
               >
                 Mint for Metaverse
               </Btn>
