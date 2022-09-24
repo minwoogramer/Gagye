@@ -38,10 +38,8 @@ export const ConnectWallet = async (
     if (accounts) {
       setAccount(accounts[0])
       console.log(accounts[0])
-      web3Modal.setCachedProvider(account)
-      if (typeof window !== undefined) {
-        window.localStorage.setItem('account', accounts[0])
-      }
+      let storage: any = localStorage.getItem('account')
+      storage = localStorage.setItem('account', accounts[0])
     }
   } catch (error) {
     console.log(error)
@@ -60,7 +58,7 @@ export const DisconnectWallet = async (setAccount: {
     web3Modal.clearCachedProvider()
     setAccount('')
     if (typeof window !== undefined) {
-      window.localStorage.setItem('account', '')
+      localStorage.setItem('account', '')
     }
   } catch (error) {
     console.log(error)

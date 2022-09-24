@@ -2,6 +2,11 @@ import { NextPage } from "next";
 import styled from "styled-components";
 import { Header } from "../Layouts/Header";
 import { BodyMinting } from "./../Layouts/BodyMinting";
+import { useEffect } from "react";
+import { ConnectWallet } from "../utils/Wallet/connectWallet";
+import { useRecoilState } from "recoil";
+import { WalletInfo } from "../utils/Atoms/atoms";
+import { useRouter } from "next/router";
 
 const MintingContainer = styled.div`
   display: flex;
@@ -16,6 +21,13 @@ const MintingContainer = styled.div`
 `;
 
 const Minting: NextPage = () => {
+  const [account, setAccount] = useRecoilState(WalletInfo);
+  useEffect(() => {
+    (async () => {
+      if (localStorage.getItem("account"))
+        await ConnectWallet(setAccount, account);
+    })();
+  }, []);
   return (
     <MintingContainer>
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>

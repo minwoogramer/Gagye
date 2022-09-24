@@ -55,9 +55,13 @@ export const HeadWallet: FC = () => {
     setShowModal(false);
     console.log(showModal);
   };
-
   useEffect(() => {
-    const Storage = window.localStorage.getItem("address");
+    (async () => {
+      if (localStorage.getItem("account"))
+        await ConnectWallet(setAccount, account);
+    })();
+  }, []);
+  useEffect(() => {
     if (isLoading == true) {
       const showToast = () => {
         toast.info("!🦄 Your Wallet Connected", {
@@ -71,6 +75,7 @@ export const HeadWallet: FC = () => {
           theme: "colored",
         });
       };
+
       if (account != "") {
         setTimeout(() => {
           showToast();
@@ -81,12 +86,8 @@ export const HeadWallet: FC = () => {
         console.log("연결성공");
       }
     } else {
-      if (account == "") {
+      if (account == "" && localStorage.getItem("account") == "") {
         router.push("/");
-      }
-      if (Storage) {
-        const path = router.pathname;
-        router.push(path);
       }
     }
   }, [account]);
