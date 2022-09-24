@@ -19,6 +19,9 @@ const MintingDateContainer = styled.div`
     margin-top: 100px;
     height: 300px;
   }
+  @media screen and (max-width: 520px) {
+    margin-top: 200px;
+  }
 `;
 
 const Time = styled.div`
