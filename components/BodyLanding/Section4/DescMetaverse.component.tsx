@@ -50,9 +50,7 @@ const Box = styled.div`
   width: 100%;
   height: 100%;
 `;
-const Span = styled.span`
-  padding-top: 7px;
-`;
+const Span = styled.span``;
 
 export const DescMetaverseContent: FC = () => {
   return (

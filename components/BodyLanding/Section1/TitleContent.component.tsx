@@ -11,7 +11,7 @@ const Container = styled.div`
     margin-top: 10%;
     width: 100vh;
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 380px) {
     margin-top: 20%;
   }
 `;
