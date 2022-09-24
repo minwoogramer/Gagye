@@ -16,8 +16,8 @@ const Container = styled.div`
   box-sizing: border-box;
   @media screen and (max-width: 1000px) {
     width: 100vh;
-    margin-top: 300px;
-    height: 100%;
+    margin-top: 200px;
+    height: 100vw;
   }
 `;
 

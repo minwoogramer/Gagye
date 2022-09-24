@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import styled from "styled-components";
 import { MintingStart } from "../../utils/Minting/GLTFMinting";
 import { useRecoilValue } from "recoil";
@@ -14,12 +14,7 @@ const MintingBoxContainer = styled.div`
   max-height: 659px;
   border: 1px solid white;
   color: white;
-  margin-top: 10%;
-  @media screen and (max-width: 1000px) {
-    width: 100vh;
-    margin: 0 auto;
-    height: 100%;
-  }
+  margin-top: 50px;
 `;
 const MintingBoxChildContainer = styled.div`
   display: flex;
@@ -28,8 +23,8 @@ const MintingBoxChildContainer = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 1200px;
-  height: 80%;
-  max-height: 528px;
+  height: 90%;
+  max-height: 550px;
   margin: 0 auto;
 `;
 
@@ -38,8 +33,8 @@ const TitleBox = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 106px;
-  margin-top: 6%;
+  height: 200px;
+  padding-top: 50px;
 `;
 const TitleText = styled.span`
   font-size: 40px;
@@ -68,12 +63,16 @@ const MultiBox = styled.div`
   justify-content: center;
   flex-direction: column;
 `;
-const MintTitleText = styled.span`
-  padding: 10px 20px;
-  width: 250px;
-  height: 80px;
-  font-size: 23px;
+const MintTitleBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 60px;
   border-bottom: 1px solid white;
+`;
+const MintTitleText = styled.span`
+  font-size: 23px;
 `;
 const SupplyBox = styled.div`
   display: flex;
@@ -110,9 +109,8 @@ const Btn = styled.button`
 `;
 
 const WhenDateBox = styled.div`
-  padding: 30px;
   width: 100%;
-  height: 40%;
+  height: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,7 +122,6 @@ const WhenDateTitle = styled.span`
 
 export const MintContent: FC = () => {
   const address: any = useRecoilValue(WalletInfo);
-
   return (
     <MintingBoxContainer>
       <MintingBoxChildContainer>
@@ -133,7 +130,9 @@ export const MintContent: FC = () => {
         </TitleBox>
         <MintingBox>
           <MetaverseBox>
-            <MintTitleText>For Metaverse (.GLTF)</MintTitleText>
+            <MintTitleBox>
+              <MintTitleText>For Metaverse (.GLTF)</MintTitleText>
+            </MintTitleBox>
             <SupplyBox>
               <SupplyText>50 / 50</SupplyText>
               <MintingFee>0.02ETH + Gas</MintingFee>
@@ -147,7 +146,9 @@ export const MintContent: FC = () => {
             </SupplyBox>
           </MetaverseBox>
           <MultiBox>
-            <MintTitleText>For Multi-purpose (.SKP)</MintTitleText>
+            <MintTitleBox>
+              <MintTitleText>For Multi-purpose (.SKP)</MintTitleText>
+            </MintTitleBox>
             <SupplyBox>
               <SupplyText>50 / 50</SupplyText>
               <MintingFee>0.5ETH + Gas</MintingFee>

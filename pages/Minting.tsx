@@ -15,7 +15,7 @@ const MintingContainer = styled.div`
   flex-direction: column;
   margin: 0 auto;
   padding: 0;
-  width: 100%;
+  width: 100vh;
   height: 100%;
   background-color: black;
 `;

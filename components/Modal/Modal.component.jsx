@@ -27,8 +27,9 @@ background-color: #ffffffe1;
 border-radius: 25px;
 border:2px solid #e7e7e7;
 @media screen and (max-width: 1000px){
-width: 250px;
-height: 350px;
+left:30%;
+width: 400px;
+height: 300px;
 }
 `
 const ModalWrapper =styled.div`
@@ -59,19 +60,7 @@ const ModalHead = styled.div`
   font-family:sans-serif;
 
 `
-const X = styled.p`
-font-size: 23px;
-padding-left: 50px;
-display: flex;
-align-items: center;
-font-weight: 700;
-cursor: pointer;
-:hover {
-    transition: 0.2s;
-    opacity: 0.8;
-  }
 
-`
 const Wallet = styled.span`
 font-weight: 600;
 color: black;
