@@ -14,6 +14,9 @@ const Container = styled.div`
   @media screen and (max-width: 1000px) {
     height: 100vw;
   }
+  @media screen and (max-width: 666px) {
+    height: 100vw;
+  }
 `;
 const Title = styled.span`
   font-size: 40px;
