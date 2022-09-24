@@ -137,8 +137,9 @@ export const MintContent: FC = () => {
               <SupplyText>50 / 50</SupplyText>
               <MintingFee>0.02ETH + Gas</MintingFee>
               <Btn
-                onClick={async () => {
-                  await MintingStart(address);
+                onClick={() => {
+                  alert("Minting, DonutGagye, will come on October 21!");
+                  //  MintingStart(address);
                 }}
               >
                 Mint for Metaverse
@@ -152,7 +153,14 @@ export const MintContent: FC = () => {
             <SupplyBox>
               <SupplyText>50 / 50</SupplyText>
               <MintingFee>0.5ETH + Gas</MintingFee>
-              <Btn>Mint for Multi-purpose</Btn>
+              <Btn
+                onClick={() => {
+                  alert("Minting, DonutGagye, will come on October 21!");
+                  //  MintingStart(address);
+                }}
+              >
+                Mint for Multi-purpose
+              </Btn>
             </SupplyBox>
           </MultiBox>
         </MintingBox>
