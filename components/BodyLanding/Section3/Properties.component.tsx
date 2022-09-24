@@ -9,8 +9,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 500px) {
-    margin-top: 100px;
+  @media screen and (max-width: 660px) {
+    margin-top: 120px;
     height: 0%;
   }
 `;
