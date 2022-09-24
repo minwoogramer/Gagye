@@ -11,6 +11,9 @@ const Container = styled.div`
     margin-top: 10%;
     width: 100vh;
   }
+  @media screen and (max-width: 400px) {
+    margin-top: 20%;
+  }
 `;
 
 export const TitleContent: FC = () => {

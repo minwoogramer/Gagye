@@ -21,13 +21,7 @@ const Title = styled.span`
   font-size: 40px;
   margin: 0;
 `;
-const TitleBold = styled.span`
-  font-size: 40px;
-  margin: 0;
-  font-weight: 600;
-  margin-right: 15px;
-  line-height: 1;
-`;
+
 const DescBox = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -48,19 +42,23 @@ const FlowBox = styled.div`
   width: 100%;
   height: 100%;
   height: 300px;
-  background-color: #615d5d;
+  background-color: #000000;
 `;
 const Box = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  border: 1px solid wheat;
+`;
+const Span = styled.span`
+  padding-top: 7px;
 `;
 
 export const DescMetaverseContent: FC = () => {
   return (
     <Container>
       <TitleBox>
-        <TitleBold>Donut Gagye is for Metaverse </TitleBold>
+        <Title>Donut Gagye is for Metaverse </Title>
       </TitleBox>
       <DescBox>
         <Desc>
@@ -80,15 +78,45 @@ export const DescMetaverseContent: FC = () => {
       <FlowBox>
         <Box>
           <Img
-            src="/ImageOfMetaverse1.svg"
-            width={1200}
-            height={700}
+            src="/Metaverse.png"
+            width={590}
+            height={350}
             alt="video"
             layout="intrinsic"
             objectFit="cover"
           />
         </Box>
-        <Box>Flow</Box>
+        <Box>
+          <Span>
+            <Img
+              src="/Spatial.png"
+              width={71}
+              height={74}
+              alt="video"
+              layout="intrinsic"
+            />
+          </Span>
+          <Span>
+            <Img
+              src="/Mona.png"
+              width={220}
+              height={74}
+              alt="video"
+              layout="intrinsic"
+              objectFit="cover"
+            />
+          </Span>
+          <Span>
+            <Img
+              src="/Decentraland.png"
+              width={424}
+              height={105}
+              alt="video"
+              layout="intrinsic"
+              objectFit="cover"
+            />
+          </Span>
+        </Box>
       </FlowBox>
     </Container>
   );

@@ -11,6 +11,15 @@ const Container = styled.div`
     width: 100vh;
     height: 20%;
   }
+  @media screen and (max-width: 650px) {
+    margin-top: 5%;
+  }
+  @media screen and (max-width: 500px) {
+    margin-top: 10%;
+  }
+  @media screen and (max-width: 400px) {
+    margin-top: 13%;
+  }
 `;
 
 const Properties = styled.div`

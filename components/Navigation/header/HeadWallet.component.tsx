@@ -1,4 +1,4 @@
-import { FC, useEffect, useState, useLayoutEffect, useRef } from "react";
+import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import { ConnectWallet } from "../../../utils/Wallet/connectWallet";
 import { useRecoilState } from "recoil";
@@ -18,6 +18,7 @@ const Accounts = styled.button`
   color: #fff;
   font-weight: 100;
   font-size: 1.2rem;
+  border: none;
   cursor: pointer;
   :hover {
     transition: 0.2s;
@@ -44,6 +45,7 @@ export const HeadWallet: FC = () => {
   const [account, setAccount] = useRecoilState(WalletInfo);
   const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
+
   const router = useRouter();
 
   const openModal = () => {
@@ -53,7 +55,9 @@ export const HeadWallet: FC = () => {
     setShowModal(false);
     console.log(showModal);
   };
+
   useEffect(() => {
+    const Storage = window.localStorage.getItem("address");
     if (isLoading == true) {
       const showToast = () => {
         toast.info("!🦄 Your Wallet Connected", {
@@ -80,6 +84,10 @@ export const HeadWallet: FC = () => {
       if (account == "") {
         router.push("/");
       }
+      if (Storage) {
+        const path = router.pathname;
+        router.push(path);
+      }
     }
   }, [account]);
 
@@ -99,7 +107,7 @@ export const HeadWallet: FC = () => {
       ) : (
         <Btn
           onClick={() => {
-            ConnectWallet(setAccount);
+            ConnectWallet(setAccount, account);
             setIsLoading(true);
             console.log(isLoading, "연결");
           }}

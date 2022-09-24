@@ -15,6 +15,11 @@ const MintingBoxContainer = styled.div`
   border: 1px solid white;
   color: white;
   margin-top: 10%;
+  @media screen and (max-width: 1000px) {
+    width: 100vh;
+    margin: 0 auto;
+    height: 100%;
+  }
 `;
 const MintingBoxChildContainer = styled.div`
   display: flex;
@@ -45,7 +50,6 @@ const MintingBox = styled.div`
   height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 `;
 const MetaverseBox = styled.div`
@@ -66,6 +70,8 @@ const MultiBox = styled.div`
 `;
 const MintTitleText = styled.span`
   padding: 10px 20px;
+  width: 250px;
+  height: 80px;
   font-size: 23px;
   border-bottom: 1px solid white;
 `;
@@ -95,6 +101,7 @@ const Btn = styled.button`
   font-size: 1.2rem;
   font-family: "Inter", sans-serif;
   font-style: normal;
+  border: none;
   cursor: pointer;
   :hover {
     transition: 0.2s;
@@ -128,7 +135,7 @@ export const MintContent: FC = () => {
           <MetaverseBox>
             <MintTitleText>For Metaverse (.GLTF)</MintTitleText>
             <SupplyBox>
-              <SupplyText>3 / 50</SupplyText>
+              <SupplyText>50 / 50</SupplyText>
               <MintingFee>0.02ETH + Gas</MintingFee>
               <Btn
                 onClick={async () => {
@@ -142,7 +149,7 @@ export const MintContent: FC = () => {
           <MultiBox>
             <MintTitleText>For Multi-purpose (.SKP)</MintTitleText>
             <SupplyBox>
-              <SupplyText>15 / 50</SupplyText>
+              <SupplyText>50 / 50</SupplyText>
               <MintingFee>0.5ETH + Gas</MintingFee>
               <Btn>Mint for Multi-purpose</Btn>
             </SupplyBox>

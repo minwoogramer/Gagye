@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-
+import Img from "next/image";
 const Container = styled.div`
   display: flex;
   margin-top: 35px;
@@ -28,11 +28,18 @@ const Desc = styled.span`
   text-align: left;
 `;
 const FlowBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  background-color: #615d5d;
+  background-color: #000;
 `;
-
+const ImgBox = styled.div`
+  @media screen and (max-width: 600px) {
+    margin-top: 20px;
+  }
+`;
 export const FlowContent: FC = () => {
   return (
     <Container>
@@ -42,7 +49,17 @@ export const FlowContent: FC = () => {
         original SketchUp file. The users can not only utilize it in the real
         world but also covert it to another file formats for their own uses.
       </Desc>
-      <FlowBox>Flow</FlowBox>
+      <FlowBox>
+        <ImgBox>
+          <Img
+            src="/Last.png"
+            width={590}
+            height={333}
+            alt="Column"
+            layout="intrinsic"
+          />
+        </ImgBox>
+      </FlowBox>
     </Container>
   );
 };

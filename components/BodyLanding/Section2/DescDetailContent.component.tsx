@@ -21,7 +21,10 @@ const Title = styled.span`
 const ImgBox = styled.div`
   margin-top: 10%;
   @media screen and (max-width: 1370px) {
-    margin-top: 30%;
+    margin-top: 200px;
+  }
+  @media screen and (max-width: 1100px) {
+    margin-top: 300px;
   }
 `;
 const DescBox = styled.div`

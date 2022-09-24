@@ -1,6 +1,7 @@
 import { ethers } from 'ethers'
 import Web3Modal from 'web3modal'
 import WalletConnectProvider from '@walletconnect/web3-provider'
+import { useEffect } from 'react'
 
 const providerOptions = {
   walletconnect: {
@@ -15,10 +16,14 @@ const providerOptions = {
     network: 'ropsten',
   },
 }
-export const ConnectWallet = async (setAccount: {
-  (valOrUpdater: string | ((currVal: string) => string)): void
-  (arg0: string): void
-}) => {
+
+export const ConnectWallet = async (
+  setAccount: {
+    (valOrUpdater: string | ((currVal: string) => string)): void
+    (arg0: string): void
+  },
+  account: string,
+) => {
   const web3Modal = new Web3Modal({
     network: 'ropsten',
     cacheProvider: true,
@@ -33,6 +38,10 @@ export const ConnectWallet = async (setAccount: {
     if (accounts) {
       setAccount(accounts[0])
       console.log(accounts[0])
+      web3Modal.setCachedProvider(account)
+      if (typeof window !== undefined) {
+        window.localStorage.setItem('account', accounts[0])
+      }
     }
   } catch (error) {
     console.log(error)
@@ -50,6 +59,9 @@ export const DisconnectWallet = async (setAccount: {
   try {
     web3Modal.clearCachedProvider()
     setAccount('')
+    if (typeof window !== undefined) {
+      window.localStorage.setItem('account', '')
+    }
   } catch (error) {
     console.log(error)
   }

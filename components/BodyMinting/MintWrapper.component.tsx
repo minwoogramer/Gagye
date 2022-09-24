@@ -14,6 +14,11 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
+  @media screen and (max-width: 1000px) {
+    width: 100vh;
+    margin-top: 300px;
+    height: 100%;
+  }
 `;
 
 interface ContainerProps {

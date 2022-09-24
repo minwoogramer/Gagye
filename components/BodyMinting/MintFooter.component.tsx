@@ -14,6 +14,11 @@ const MintingBoxContainer = styled.div`
   color: white;
   margin: 0 auto;
   line-height: 5;
+  @media screen and (max-width: 1000px) {
+    width: 100vh;
+    margin-top: 20px;
+    height: 100%;
+  }
 `;
 const FooterContentText = styled.span`
   margin: 0;

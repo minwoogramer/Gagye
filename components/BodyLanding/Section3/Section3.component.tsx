@@ -16,6 +16,9 @@ const Container = styled.div`
     width: 100vh;
     height: 100%;
   }
+  @media screen and (max-width: 550px) {
+    margin-top: 500px;
+  }
 `;
 
 interface ContainerProps {
