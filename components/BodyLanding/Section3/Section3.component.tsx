@@ -7,10 +7,10 @@ const Container = styled.div`
   flex-direction: column;
   background-color: #000;
   width: 100%;
-  height: 22%;
+  height: 20%;
   justify-content: center;
   align-items: center;
-  margin-top: 250px;
+  margin-top: 0px;
   @media screen and (max-width: 1000px) {
     margin-top: 300px;
     width: 100vh;

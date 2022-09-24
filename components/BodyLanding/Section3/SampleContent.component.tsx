@@ -5,11 +5,13 @@ const Container = styled.div`
   display: flex;
   background-color: #000;
   width: 100%;
+  height: 20%;
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 1000px) {
     width: 100vh;
     height: 20%;
+    margin-top: 20px;
   }
 `;
 const SampleBox = styled.div``;

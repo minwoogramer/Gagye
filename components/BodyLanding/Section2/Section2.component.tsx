@@ -10,7 +10,7 @@ const Container = styled.div`
   height: 30%;
   justify-content: center;
   align-items: center;
-  margin-top: 300px;
+  margin-top: 50px;
   @media screen and (max-width: 1000px) {
     margin-top: 400px;
     width: 100vh;
