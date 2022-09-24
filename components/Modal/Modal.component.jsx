@@ -27,12 +27,12 @@ background-color: #ffffffe1;
 border-radius: 25px;
 border:2px solid #e7e7e7;
 @media screen and (max-width: 1000px){
-left:30%;
-width: 400px;
+left:20%;
+width: 500px;
 height: 300px;
 }
 @media screen and (max-width: 660px) {
-  left:25%;
+  left:20%;
   }
 `
 const ModalWrapper =styled.div`
