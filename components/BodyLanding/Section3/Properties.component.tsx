@@ -32,7 +32,7 @@ export const PropertiesContent: FC = () => {
     <Container>
       <Properties>
         <Img
-          src="/Images/Property1.png"
+          src="/Property1.png"
           width={236}
           height={120}
           alt="Column"
@@ -42,7 +42,7 @@ export const PropertiesContent: FC = () => {
       </Properties>
       <Properties>
         <Img
-          src="/Images/Property2.png"
+          src="/Property2.png"
           width={236}
           height={120}
           alt="Wall"
@@ -52,7 +52,7 @@ export const PropertiesContent: FC = () => {
       </Properties>
       <Properties>
         <Img
-          src="/Images/Property3.png"
+          src="/Property3.png"
           width={236}
           height={120}
           alt="Roof Design"
@@ -62,7 +62,7 @@ export const PropertiesContent: FC = () => {
       </Properties>
       <Properties>
         <Img
-          src="/Images/Property4.png"
+          src="/Property4.png"
           width={236}
           height={120}
           alt="Sunshade"
@@ -72,7 +72,7 @@ export const PropertiesContent: FC = () => {
       </Properties>
       <Properties>
         <Img
-          src="/Images/Property5.png"
+          src="/Property5.png"
           width={236}
           height={120}
           alt="Doughnut"

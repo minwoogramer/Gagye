@@ -80,7 +80,7 @@ export const DescMetaverseContent: FC = () => {
       <FlowBox>
         <Box>
           <Img
-            src="/Images/ImageOfMetaverse1.svg"
+            src="/ImageOfMetaverse1.svg"
             width={1200}
             height={700}
             alt="video"

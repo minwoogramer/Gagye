@@ -18,30 +18,14 @@ export const SampleContent: FC = () => {
     <Container>
       <SampleBox>
         <Img
-          src="/Images/SampleImg1.png"
+          src="/SampleImg1.png"
           width={236}
           height={140}
           alt="Column"
           layout="intrinsic"
         />
         <Img
-          src="/Images/SampleImg2.png"
-          width={236}
-          height={140}
-          alt="Column"
-          layout="intrinsic"
-        />
-      </SampleBox>
-      <SampleBox>
-        <Img
-          src="/Images/SampleImg3.png"
-          width={236}
-          height={140}
-          alt="Column"
-          layout="intrinsic"
-        />
-        <Img
-          src="/Images/SampleImg4.png"
+          src="/SampleImg2.png"
           width={236}
           height={140}
           alt="Column"
@@ -50,30 +34,14 @@ export const SampleContent: FC = () => {
       </SampleBox>
       <SampleBox>
         <Img
-          src="/Images/SampleImg5.png"
+          src="/SampleImg3.png"
           width={236}
           height={140}
           alt="Column"
           layout="intrinsic"
         />
         <Img
-          src="/Images/SampleImg6.png"
-          width={236}
-          height={140}
-          alt="Column"
-          layout="intrinsic"
-        />
-      </SampleBox>
-      <SampleBox>
-        <Img
-          src="/Images/SampleImg7.png"
-          width={236}
-          height={140}
-          alt="Column"
-          layout="intrinsic"
-        />
-        <Img
-          src="/Images/SampleImg8.png"
+          src="/SampleImg4.png"
           width={236}
           height={140}
           alt="Column"
@@ -82,14 +50,46 @@ export const SampleContent: FC = () => {
       </SampleBox>
       <SampleBox>
         <Img
-          src="/Images/SampleImg9.png"
+          src="/SampleImg5.png"
           width={236}
           height={140}
           alt="Column"
           layout="intrinsic"
         />
         <Img
-          src="/Images/SampleImg10.png"
+          src="/SampleImg6.png"
+          width={236}
+          height={140}
+          alt="Column"
+          layout="intrinsic"
+        />
+      </SampleBox>
+      <SampleBox>
+        <Img
+          src="/SampleImg7.png"
+          width={236}
+          height={140}
+          alt="Column"
+          layout="intrinsic"
+        />
+        <Img
+          src="/SampleImg8.png"
+          width={236}
+          height={140}
+          alt="Column"
+          layout="intrinsic"
+        />
+      </SampleBox>
+      <SampleBox>
+        <Img
+          src="/SampleImg9.png"
+          width={236}
+          height={140}
+          alt="Column"
+          layout="intrinsic"
+        />
+        <Img
+          src="/SampleImg10.png"
           width={236}
           height={140}
           alt="Column"

@@ -17,7 +17,7 @@ export const TitleContent: FC = () => {
   return (
     <Container>
       <Img
-        src="/Images/VIDEO (With Realistic View).png"
+        src="/VIDEO.png"
         width={2000}
         height={800}
         alt="video"
