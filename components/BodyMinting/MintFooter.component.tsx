@@ -7,7 +7,7 @@ const MintingBoxContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
   height: 100%;
   max-height: 230px;
