@@ -57,7 +57,7 @@ export const DescDetailContent: FC = () => {
       </DescBox>
       <ImgBox>
         <Img
-          src="/Images/AboutDonut.png"
+          src="/AboutDonut.png"
           width={1200}
           height={535}
           alt="video"

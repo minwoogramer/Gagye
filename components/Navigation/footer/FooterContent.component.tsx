@@ -29,7 +29,7 @@ export const FooterContent: FC<FooterProps> = () => {
   return (
     <FooterContentContainer>
       <Img
-        src="/Images/Wyzrs.png"
+        src="/Wyzrs.png"
         width={136}
         height={38.91}
         alt="logo"
