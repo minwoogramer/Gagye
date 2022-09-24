@@ -5,7 +5,7 @@ const Container = styled.div`
   display: flex;
   background-color: #000;
   width: 100%;
-  height: 20%;
+  height: 30%;
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 1000px) {
