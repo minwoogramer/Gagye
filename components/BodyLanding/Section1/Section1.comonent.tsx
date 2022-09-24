@@ -3,24 +3,23 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  margin-top: 7%;
-  background-color: #000000;
-  width: 100%;
-  max-width: 1200px;
-  height: 4800px;
-  align-items: center;
   flex-direction: column;
-  margin-bottom: 0;
+  background-color: #000;
+  width: 100%;
+  height: 30%;
+  justify-content: flex-start;
+  align-items: center;
   @media screen and (max-width: 1000px) {
     width: 100vh;
-    margin: 0 auto;
-    height: 100%;
+    height: 30%;
+    justify-content: flex-start;
+    align-items: center;
   }
 `;
 
 interface ContainerProps {
   children: ReactNode;
 }
-export const ContentWrapper: FC<ContainerProps> = ({ children }) => {
+export const Section1: FC<ContainerProps> = ({ children }) => {
   return <Container>{children}</Container>;
 };

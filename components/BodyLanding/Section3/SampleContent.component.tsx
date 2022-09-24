@@ -5,10 +5,12 @@ const Container = styled.div`
   display: flex;
   background-color: #000;
   width: 100%;
-  height: 70%;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  @media screen and (max-width: 1000px) {
+    width: 100vh;
+    height: 20%;
+  }
 `;
 const SampleBox = styled.div``;
 export const SampleContent: FC = () => {

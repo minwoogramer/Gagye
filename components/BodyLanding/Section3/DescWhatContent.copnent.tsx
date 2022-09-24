@@ -6,28 +6,24 @@ const Container = styled.div`
   background-color: #000000;
   color: #fff;
   width: 100%;
-  height: 100%;
+  height: 30vw;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid black;
   line-height: 2;
+  padding: 0;
+  @media screen and (max-width: 1000px) {
+    height: 100vw;
+  }
 `;
 const Title = styled.span`
   font-size: 40px;
   margin: 0;
 `;
-const TitleBold = styled.span`
-  font-size: 40px;
-  margin: 0;
-  font-weight: 600;
-`;
 const DescBox = styled.div`
   display: flex;
   width: 100%;
-  height: 100%;
   justify-content: flex-start;
   flex-direction: column;
-  margin: 25px 0px;
 `;
 const Desc = styled.span`
   font-size: 23px;
@@ -35,7 +31,7 @@ const Desc = styled.span`
   margin: 0;
   line-height: 1.5;
 `;
-export const DescHowContent: FC = () => {
+export const DescWhatContent: FC = () => {
   return (
     <Container>
       <Title>What We offer</Title>

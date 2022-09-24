@@ -3,14 +3,10 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  margin-top: 35px;
   background-color: #000000;
-  width: 100%;
-  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-style: inherit;
 `;
 const Title = styled.div`
   display: flex;
@@ -19,7 +15,11 @@ const Title = styled.div`
   background-color: black;
   color: white;
   font-size: 2.5rem;
-  padding: 20px;
+  margin-top: 2%;
+  @media screen and (max-width: 1000px) {
+    margin-top: 5%;
+    width: 100vh;
+  }
 `;
 const InfoBox = styled.div`
   width: 100%;
@@ -34,6 +34,7 @@ const InfoBox = styled.div`
     justify-content: center;
     display: flex;
     padding: 20px;
+    margin: 50px;
   }
 `;
 
@@ -43,15 +44,15 @@ const MintingInfo = styled.div`
   justify-content: center;
   align-items: center;
   line-height: 3;
-  margin-right: 50px;
-  margin-left: 50px;
-  padding-bottom: 45px;
+  margin-right: 30px;
+  margin-left: 32px;
+  padding-bottom: 30px;
 
   @media screen and (max-width: 1370px) {
     flex-direction: row;
     align-items: center;
     display: flex;
-    margin: 0 auto;
+    margin: 20px;
     line-height: 1;
   }
 `;
@@ -87,14 +88,14 @@ const InfoMintingTime = styled.span`
   font-size: 23px;
   color: #fff;
 `;
-
+//언제 민팅할지 텍스트
 const CollectionInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 1000px) {
-    margin-top: 5%;
+    margin-top: 2%;
   }
 `;
 const SupplyInfo = styled.div`
@@ -145,6 +146,9 @@ const SupplyText = styled.span`
   margin-top: 10px;
   font-size: 23px;
   color: #fff;
+  @media screen and (max-width: 1370px) {
+    font-size: 30px;
+  }
 `;
 export const MintInfoContent: FC = () => {
   return (

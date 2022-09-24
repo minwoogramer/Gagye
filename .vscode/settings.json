@@ -7,5 +7,6 @@
         "mintingpage",
         "nomicfoundation",
         "walletconnect"
-    ]
+    ],
+    "DockerRun.DisableDockerrc": true
 }

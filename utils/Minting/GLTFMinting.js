@@ -1,19 +1,9 @@
 import { BigNumber, ethers } from "ethers";
 import GLTFabi from "./GLTFjson";
-import { Web3Modal } from "web3modal";
-const mintAddress = "0xeC4128032a6584cEa1EfD70Ee62e88F8110cba75";
+import dotenv from "dotenv";
+dotenv.config();
+const mintAddress = process.env.CONTRACT_ADDRESS;
 
-// const providerOptions = {
-//   walletconnect: {
-//     package: WalletConnectProvider, // required
-//     cacheProvider: true,
-//     options: {
-//       appName: "web3Modal ",
-//       infuraId: "https://rinkeby.infura.io/v3/f205e2d61653432c996724150f59c1e3",
-//       darkMode: true, // required
-//     },
-//   },
-// };
 //컨트랙트주소 넣는 곳
 export const MintingStart = async ({ address }) => {
   if (address != "") {

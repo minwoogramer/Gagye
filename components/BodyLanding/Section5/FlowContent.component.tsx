@@ -7,11 +7,14 @@ const Container = styled.div`
   background-color: #000000;
   color: #fff;
   width: 100%;
-  height: 100%;
+  height: 100vw;
   flex-direction: column;
   justify-content: center;
   border: 1px solid black;
-  line-height: 2;
+  line-height: 1.5;
+  @media screen and (max-width: 1000px) {
+    width: 100vh;
+  }
 `;
 const Title = styled.span`
   font-size: 40px;
@@ -29,6 +32,7 @@ const FlowBox = styled.div`
   height: 100%;
   background-color: #615d5d;
 `;
+
 export const FlowContent: FC = () => {
   return (
     <Container>

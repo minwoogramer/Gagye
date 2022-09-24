@@ -33,6 +33,7 @@ const Btn = styled.button`
   font-style: normal;
   color: #fff;
   font-size: 1.2rem;
+  border: none;
   cursor: pointer;
   :hover {
     transition: 0.2s;

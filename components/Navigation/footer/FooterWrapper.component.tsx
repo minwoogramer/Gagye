@@ -14,6 +14,11 @@ const FootContainer = styled.div`
   max-width: 1200px;
   margin-top: 30px;
   color: white;
+  bottom: 0;
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 `;
 
 export const FootWrapper: FC<ContainerProps> = ({ children }) => {

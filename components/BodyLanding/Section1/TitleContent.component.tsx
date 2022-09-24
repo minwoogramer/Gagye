@@ -2,14 +2,15 @@ import { FC } from "react";
 import styled from "styled-components";
 import Img from "next/image";
 const Container = styled.div`
-  margin-top: 5%;
   display: flex;
   background-color: #ebecea;
   width: 100%;
-  height: 100%;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  @media screen and (max-width: 1000px) {
+    margin-top: 10%;
+    width: 100vh;
+  }
 `;
 
 export const TitleContent: FC = () => {
@@ -20,7 +21,7 @@ export const TitleContent: FC = () => {
         width={2000}
         height={800}
         alt="video"
-        layout="fixed"
+        layout="intrinsic"
       />
     </Container>
   );

@@ -6,20 +6,23 @@ const Container = styled.div`
   background-color: #000000;
   color: #fff;
   width: 100%;
-  height: 100%;
+  height: 30vw;
   flex-direction: column;
   justify-content: center;
   border: 1px solid black;
   line-height: 2;
-  margin-top: 5%;
+  margin-top: 0%;
 `;
 const Title = styled.span`
   font-size: 40px;
-  margin: 0;
+  margin: 10px;
 `;
 
 const ImgBox = styled.div`
-  margin-top: 5%;
+  margin-top: 10%;
+  @media screen and (max-width: 1370px) {
+    margin-top: 30%;
+  }
 `;
 const DescBox = styled.div`
   display: flex;
