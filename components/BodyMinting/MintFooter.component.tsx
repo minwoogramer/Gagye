@@ -27,7 +27,7 @@ export const MintFooter: FC = () => {
   return (
     <MintingBoxContainer>
       <Img
-        src="/Images/Wyzrs.png"
+        src="/Wyzrs.png"
         width={136}
         height={38.91}
         alt="logo"
