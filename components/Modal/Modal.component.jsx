@@ -31,6 +31,9 @@ left:30%;
 width: 400px;
 height: 300px;
 }
+@media screen and (max-width: 660px) {
+  left:25%;
+  }
 `
 const ModalWrapper =styled.div`
 display: flex;
