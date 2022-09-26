@@ -49,14 +49,24 @@ const FlowBox = styled.div`
 `;
 const Box = styled.div`
   display: flex;
+  align-items: center;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 100%;
   @media screen and (max-width: 450px) {
-    margin-top: 10px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
   }
 `;
-const Span = styled.span``;
+const Span = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const DescMetaverseContent: FC = () => {
   return (
@@ -83,42 +93,22 @@ export const DescMetaverseContent: FC = () => {
         <Box>
           <Img
             src="/Metaverse123.png"
-            width={590}
-            height={350}
-            alt="video"
+            width={800}
+            height={420}
+            alt="logo"
             layout="intrinsic"
             objectFit="cover"
           />
         </Box>
         <Box>
           <Span>
-            <Img
-              src="/Spatial.png"
-              width={71}
-              height={74}
-              alt="video"
-              layout="intrinsic"
-            />
+            <Img src="/Spatial.png" width={94} height={94} alt="logo" />
           </Span>
           <Span>
-            <Img
-              src="/Mona.png"
-              width={210}
-              height={54}
-              alt="video"
-              layout="intrinsic"
-              objectFit="cover"
-            />
+            <Img src="/Mona.png" width={210} height={94} alt="logo" />
           </Span>
           <Span>
-            <Img
-              src="/Decentraland.png"
-              width={424}
-              height={74}
-              alt="video"
-              layout="intrinsic"
-              objectFit="cover"
-            />
+            <Img src="/Decentraland.png" width={324} height={94} alt="logo" />
           </Span>
         </Box>
       </FlowBox>
