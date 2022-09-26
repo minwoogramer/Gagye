@@ -20,7 +20,7 @@ const Container = styled.div`
     margin-top: 500px;
   }
   @media screen and (max-width: 400px) {
-    margin-top: 700px;
+    margin-top: 550px;
   }
 `;
 

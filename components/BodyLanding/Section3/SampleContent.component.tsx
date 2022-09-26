@@ -13,6 +13,9 @@ const Container = styled.div`
     height: 5%;
     margin-top: 0px;
   }
+  @media screen and (max-width: 400px) {
+    padding-top: 50px;
+  }
 `;
 const SampleBox = styled.div``;
 export const SampleContent: FC = () => {

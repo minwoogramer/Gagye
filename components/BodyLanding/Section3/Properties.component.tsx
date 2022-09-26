@@ -13,13 +13,11 @@ const Container = styled.div`
     padding-top: 50px;
     padding-bottom: 30px;
     margin-top: 0px;
-    height: 150px;
+    height: 180px;
   }
-  @media screen and (max-width: 380px) {
-    padding-top: 50px;
-    padding-bottom: 30px;
-    margin-top: 100px;
-    height: 150px;
+  @media screen and (max-width: 400px) {
+    padding-top: 100px;
+    height: 200px;
   }
 `;
 

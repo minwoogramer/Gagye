@@ -27,10 +27,10 @@ const ImgBox = styled.div`
     margin-top: 300px;
   }
   @media screen and (max-width: 600px) {
-    margin-top: 400px;
+    margin-top: 300px;
   }
   @media screen and (max-width: 400px) {
-    margin-top: 450px;
+    margin-top: 300px;
   }
 `;
 const DescBox = styled.div`

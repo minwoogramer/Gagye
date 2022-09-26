@@ -11,11 +11,14 @@ const Container = styled.div`
   height: auto;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  @media screen and (max-width: 1000px) {
+  margin-top: 400px;
+  @media screen and (max-width: 1100px) {
     margin-top: 500px;
     width: 100vh;
     height: 35%;
+  }
+  @media screen and (max-width: 400px) {
+    margin-top: 500px;
   }
 `;
 
