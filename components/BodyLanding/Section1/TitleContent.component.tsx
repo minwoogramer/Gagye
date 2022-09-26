@@ -19,12 +19,15 @@ const Container = styled.div`
 export const TitleContent: FC = () => {
   return (
     <Container>
-      <Img
-        src="/VIDEO.png"
-        width={2000}
-        height={800}
-        alt="video"
-        layout="intrinsic"
+      <video
+        src={"./Video.mp4"}
+        width="2000px"
+        height="auto"
+        autoPlay
+        muted
+        controls
+        data-keepplaying
+        id="title-play"
       />
     </Container>
   );
