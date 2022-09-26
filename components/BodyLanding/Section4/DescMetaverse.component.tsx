@@ -55,11 +55,11 @@ const Box = styled.div`
   width: 100%;
   height: 100%;
   @media screen and (max-width: 450px) {
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 40px;
   }
 `;
 const Span = styled.div`
@@ -95,40 +95,20 @@ export const DescMetaverseContent: FC = () => {
             src="/Metaverse123.png"
             width={800}
             height={420}
-            alt="video"
+            alt="logo"
             layout="intrinsic"
             objectFit="cover"
           />
         </Box>
         <Box>
           <Span>
-            <Img
-              src="/Spatial.png"
-              width={71}
-              height={74}
-              alt="video"
-              layout="intrinsic"
-            />
+            <Img src="/Spatial.png" width={94} height={94} alt="logo" />
           </Span>
           <Span>
-            <Img
-              src="/Mona.png"
-              width={210}
-              height={54}
-              alt="video"
-              layout="intrinsic"
-              objectFit="cover"
-            />
+            <Img src="/Mona.png" width={210} height={94} alt="logo" />
           </Span>
           <Span>
-            <Img
-              src="/Decentraland.png"
-              width={424}
-              height={84}
-              alt="video"
-              layout="intrinsic"
-              objectFit="cover"
-            />
+            <Img src="/Decentraland.png" width={324} height={94} alt="logo" />
           </Span>
         </Box>
       </FlowBox>
