@@ -102,7 +102,7 @@ export const DescMetaverseContent: FC = () => {
         </Box>
         <Box>
           <Span>
-            <Img src="/Spatial.png" width={94} height={94} alt="logo" />
+            <Img src="/Spatial.png" width={84} height={74} alt="logo" />
           </Span>
           <Span>
             <Img src="/Mona.png" width={210} height={94} alt="logo" />
