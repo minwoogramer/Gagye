@@ -6,12 +6,27 @@ interface ContainerProps {
 }
 
 const HeaderContainer = styled.div`
-  background-color: #000000;
+  background-color: #0000;
   display: flex;
   align-items: center;
-  min-width: 320px;
-  width: 100%;
+  justify-content: space-between;
+  min-width: 1210px;
+  max-width: 1400px;
   height: auto;
+  @media screen and (max-width: 1600px) {
+    min-width: 1210px;
+  }
+  @media screen and (max-width: 1400px) {
+    min-width: 1210px;
+  }
+  @media screen and (max-width: 1300px) {
+    min-width: 420px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 export const HeadLChildWrapper: FC<ContainerProps> = ({ children }) => {
   return <HeaderContainer>{children}</HeaderContainer>;

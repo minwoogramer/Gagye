@@ -7,7 +7,17 @@ import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Modals } from "./../../Modal/Modal.component";
-const ConnectWalletContainer = styled.div``;
+const ConnectWalletContainer = styled.div`
+  display: flex;
+  width: 15rem;
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 1rem;
+  @media screen and (max-width: 500px) {
+    margin-top: 0rem;
+    margin-right: 1rem;
+  }
+`;
 const Accounts = styled.button`
   background-color: #0350f0;
   border-radius: 45px;
@@ -35,7 +45,7 @@ const Btn = styled.button`
   color: #fff;
   font-size: 1.2rem;
   border: none;
-  margin-top: 0rem;
+  margin: 0;
   cursor: pointer;
   :hover {
     transition: 0.2s;

@@ -12,7 +12,8 @@ const HeaderContainer = styled.nav`
   left: 0;
   display: flex;
   width: 100%;
-  height: 12%;
+  min-width: 420px;
+  height: 100px;
   justify-content: space-between;
   box-sizing: border-box;
   background-color: #000;
@@ -20,6 +21,9 @@ const HeaderContainer = styled.nav`
   padding-top: 10px;
   padding-bottom: 10px;
   @media screen and (max-width: 1000px) {
+    height: 100px;
+  }
+  @media screen and (max-width: 500px) {
     height: 7%;
   }
 `;

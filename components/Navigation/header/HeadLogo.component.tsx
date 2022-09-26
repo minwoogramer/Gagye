@@ -6,12 +6,16 @@ interface HeadProps {}
 const HeaderLogo = styled.div`
   color: #ffffff;
   font-size: 4rem;
-  text-align: center;
   margin-bottom: 1rem;
-  margin-top: 0rem;
+  margin: 0;
+  min-width: 4rem;
+  height: auto;
   @media screen and (max-width: 800px) {
-    margin-top: 1rem;
-    font-size: 3.5rem;
+    font-size: 3rem;
+  }
+  @media screen and (max-width: 500px) {
+    margin-top: 0rem;
+    font-size: 3rem;
   }
 `;
 
