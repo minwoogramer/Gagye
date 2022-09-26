@@ -8,12 +8,10 @@ interface ContainerProps {
 const HeaderContainer = styled.div`
   background-color: #000000;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1800px;
   min-width: 320px;
   width: 100%;
-  height: 100%;
+  height: auto;
 `;
 export const HeadLChildWrapper: FC<ContainerProps> = ({ children }) => {
   return <HeaderContainer>{children}</HeaderContainer>;

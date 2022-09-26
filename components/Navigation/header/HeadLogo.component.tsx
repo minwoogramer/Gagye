@@ -8,7 +8,9 @@ const HeaderLogo = styled.div`
   font-size: 4rem;
   text-align: center;
   margin-bottom: 1rem;
+  margin-top: 0rem;
   @media screen and (max-width: 800px) {
+    margin-top: 1rem;
     font-size: 3.5rem;
   }
 `;

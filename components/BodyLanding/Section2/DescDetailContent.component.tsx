@@ -19,12 +19,18 @@ const Title = styled.span`
 `;
 
 const ImgBox = styled.div`
-  margin-top: 10%;
+  margin-top: 150px;
   @media screen and (max-width: 1370px) {
     margin-top: 200px;
   }
   @media screen and (max-width: 1100px) {
     margin-top: 300px;
+  }
+  @media screen and (max-width: 600px) {
+    margin-top: 400px;
+  }
+  @media screen and (max-width: 400px) {
+    margin-top: 450px;
   }
 `;
 const DescBox = styled.div`
@@ -60,10 +66,10 @@ export const DescDetailContent: FC = () => {
       </DescBox>
       <ImgBox>
         <Img
-          src="/AboutDonut.png"
+          src="/InteriorImage.png"
           width={1200}
-          height={535}
-          alt="video"
+          height={585}
+          alt="interior"
           layout="intrinsic"
           objectFit="cover"
         />

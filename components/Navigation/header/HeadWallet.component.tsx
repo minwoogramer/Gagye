@@ -28,13 +28,14 @@ const Accounts = styled.button`
 const Btn = styled.button`
   background-color: #0350f0;
   border-radius: 45px;
-  width: 18rem;
-  height: 4rem;
+  width: 14rem;
+  height: 3rem;
   font-family: "Inter";
   font-style: normal;
   color: #fff;
   font-size: 1.2rem;
   border: none;
+  margin-top: 0rem;
   cursor: pointer;
   :hover {
     transition: 0.2s;

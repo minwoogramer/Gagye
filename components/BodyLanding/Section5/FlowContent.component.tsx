@@ -6,8 +6,9 @@ const Container = styled.div`
   margin-top: 35px;
   background-color: #000000;
   color: #fff;
+  min-width: 400px;
   width: 100%;
-  height: 100vw;
+  height: auto;
   flex-direction: column;
   justify-content: center;
   border: 1px solid black;
@@ -15,12 +16,15 @@ const Container = styled.div`
   @media screen and (max-width: 1000px) {
     width: 100vh;
   }
+  min-width: 400px;
+  height: auto;
 `;
 const Title = styled.span`
   font-size: 40px;
   margin: 0;
 `;
 const Desc = styled.span`
+  margin-top: 50px;
   font-size: 23px;
   font-weight: 100;
   line-height: 28px;
@@ -32,14 +36,15 @@ const FlowBox = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 80%;
   background-color: #000;
 `;
 const ImgBox = styled.div`
-  @media screen and (max-width: 600px) {
-    margin-top: 20px;
+  @media screen and (max-width: 1200px) {
+    margin-top: 30px;
   }
 `;
+
 export const FlowContent: FC = () => {
   return (
     <Container>
@@ -52,9 +57,9 @@ export const FlowContent: FC = () => {
       <FlowBox>
         <ImgBox>
           <Img
-            src="/Last.png"
-            width={590}
-            height={333}
+            src="/Last123.png"
+            width={1200}
+            height={600}
             alt="Column"
             layout="intrinsic"
           />

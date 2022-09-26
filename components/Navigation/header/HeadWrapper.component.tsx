@@ -12,10 +12,10 @@ const HeaderContainer = styled.nav`
   left: 0;
   display: flex;
   width: 100%;
-  height: 10%;
+  height: 15%;
+  justify-content: space-between;
   box-sizing: border-box;
   background-color: #000000;
-  gap: 10px;
   z-index: 1;
   padding-top: 10px;
   padding-bottom: 10px;

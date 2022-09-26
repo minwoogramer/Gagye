@@ -10,8 +10,8 @@ const Container = styled.div`
   align-items: center;
   @media screen and (max-width: 1000px) {
     width: 100vh;
-    height: 20%;
-    margin-top: 20px;
+    height: 5%;
+    margin-top: 0px;
   }
 `;
 const SampleBox = styled.div``;

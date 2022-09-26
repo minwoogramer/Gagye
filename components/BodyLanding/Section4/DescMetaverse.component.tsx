@@ -11,6 +11,9 @@ const Container = styled.div`
   flex-direction: column;
   border: 1px solid black;
   line-height: 2;
+  @media screen and (max-width: 450px) {
+    height: 800px;
+  }
 `;
 const TitleBox = styled.div`
   display: flex;
@@ -43,12 +46,18 @@ const FlowBox = styled.div`
   height: 100%;
   height: 300px;
   background-color: #000000;
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+  }
 `;
 const Box = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  @media screen and (max-width: 450px) {
+    margin-top: 10px;
+  }
 `;
 const Span = styled.span``;
 
@@ -76,7 +85,7 @@ export const DescMetaverseContent: FC = () => {
       <FlowBox>
         <Box>
           <Img
-            src="/Metaverse.png"
+            src="/Metaverse123.png"
             width={590}
             height={350}
             alt="video"
@@ -97,8 +106,8 @@ export const DescMetaverseContent: FC = () => {
           <Span>
             <Img
               src="/Mona.png"
-              width={220}
-              height={74}
+              width={210}
+              height={54}
               alt="video"
               layout="intrinsic"
               objectFit="cover"
@@ -108,7 +117,7 @@ export const DescMetaverseContent: FC = () => {
             <Img
               src="/Decentraland.png"
               width={424}
-              height={105}
+              height={74}
               alt="video"
               layout="intrinsic"
               objectFit="cover"
