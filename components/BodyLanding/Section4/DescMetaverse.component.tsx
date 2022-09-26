@@ -7,13 +7,11 @@ const Container = styled.div`
   background-color: #000000;
   color: #fff;
   width: 100%;
-  height: 100vw;
+  min-width: 420px;
+  height: auto;
   flex-direction: column;
   border: 1px solid black;
   line-height: 2;
-  @media screen and (max-width: 450px) {
-    height: 800px;
-  }
 `;
 const TitleBox = styled.div`
   display: flex;
@@ -29,25 +27,24 @@ const DescBox = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  margin: 25px 0px;
 `;
 
 const Desc = styled.span`
-  font-size: 23px;
-  letter-spacing: 0em;
-  margin: 0;
   line-height: 1.5;
+  font-size: 23px;
+  text-align: left;
 `;
 
 const FlowBox = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100%;
   height: 300px;
+  margin-top: 50px;
   background-color: #000000;
   @media screen and (max-width: 450px) {
     flex-direction: column;
+    margin-top: 30px;
   }
 `;
 const Box = styled.div`

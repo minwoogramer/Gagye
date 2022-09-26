@@ -8,16 +8,16 @@ const Container = styled.div`
   height: 200px;
   justify-content: center;
   align-items: center;
-
+  margin-top: 30px;
+  @media screen and (max-width: 1000px) {
+    margin-top: 60px;
+    height: 100px;
+  }
   @media screen and (max-width: 660px) {
-    padding-top: 50px;
-    padding-bottom: 30px;
-    margin-top: 0px;
-    height: 180px;
+    height: 110px;
   }
   @media screen and (max-width: 400px) {
-    padding-top: 100px;
-    height: 200px;
+    height: 120px;
   }
 `;
 

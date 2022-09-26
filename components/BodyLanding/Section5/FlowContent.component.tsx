@@ -11,8 +11,8 @@ const Container = styled.div`
   height: auto;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid black;
-  line-height: 1.5;
+  line-height: 2;
+
   @media screen and (max-width: 1000px) {
     width: 100vh;
   }
@@ -21,14 +21,13 @@ const Container = styled.div`
 `;
 const Title = styled.span`
   font-size: 40px;
-  margin: 0;
+  margin-bottom: 20px;
+  line-height: 1;
+  margin-left: 0;
 `;
 const Desc = styled.span`
-  margin-top: 50px;
+  line-height: 1.5;
   font-size: 23px;
-  font-weight: 100;
-  line-height: 28px;
-  letter-spacing: 0em;
   text-align: left;
 `;
 const FlowBox = styled.div`
@@ -40,8 +39,9 @@ const FlowBox = styled.div`
   background-color: #000;
 `;
 const ImgBox = styled.div`
+  margin-top: 50px;
   @media screen and (max-width: 1200px) {
-    margin-top: 30px;
+    margin-top: 50px;
   }
 `;
 
