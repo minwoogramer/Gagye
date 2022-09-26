@@ -7,12 +7,13 @@ const Container = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
+  margin-top: 45px;
   @media screen and (max-width: 1000px) {
-    margin-top: 10%;
+    margin-top: 100px;
     width: 100vh;
   }
   @media screen and (max-width: 380px) {
-    margin-top: 20%;
+    margin-top: 100px;
   }
 `;
 
@@ -21,7 +22,7 @@ export const TitleContent: FC = () => {
     <Container>
       <video
         src={"./Video.mp4"}
-        width="2000px"
+        width="1200px"
         height="auto"
         autoPlay
         muted

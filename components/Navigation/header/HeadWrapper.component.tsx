@@ -12,15 +12,15 @@ const HeaderContainer = styled.nav`
   left: 0;
   display: flex;
   width: 100%;
-  height: 15%;
+  height: 12%;
   justify-content: space-between;
   box-sizing: border-box;
-  background-color: #000000;
+  background-color: #000;
   z-index: 1;
   padding-top: 10px;
   padding-bottom: 10px;
   @media screen and (max-width: 1000px) {
-    height: 8%;
+    height: 7%;
   }
 `;
 

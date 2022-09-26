@@ -7,17 +7,16 @@ const Container = styled.div`
   flex-direction: column;
   background-color: #000;
   width: 100%;
-  min-width: 400px;
+  min-width: 420px;
   height: auto;
   justify-content: center;
   align-items: center;
-  margin-top: 400px;
-  @media screen and (max-width: 1100px) {
-    margin-top: 500px;
+  margin-top: 300px;
+  @media screen and (max-width: 1000px) {
+    margin-top: 400px;
     width: 100vh;
-    height: 35%;
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 630px) {
     margin-top: 500px;
   }
 `;

@@ -11,8 +11,8 @@ const ConnectWalletContainer = styled.div``;
 const Accounts = styled.button`
   background-color: #0350f0;
   border-radius: 45px;
-  width: 18rem;
-  height: 4rem;
+  width: 14rem;
+  height: 3rem;
   font-family: "Inter";
   font-style: normal;
   color: #fff;

@@ -10,7 +10,7 @@ const IndexContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
   height: 100%;

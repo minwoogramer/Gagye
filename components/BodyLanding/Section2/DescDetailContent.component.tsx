@@ -19,18 +19,12 @@ const Title = styled.span`
 `;
 
 const ImgBox = styled.div`
-  margin-top: 150px;
+  margin-top: 100px;
   @media screen and (max-width: 1370px) {
     margin-top: 200px;
   }
   @media screen and (max-width: 1100px) {
-    margin-top: 300px;
-  }
-  @media screen and (max-width: 600px) {
-    margin-top: 300px;
-  }
-  @media screen and (max-width: 400px) {
-    margin-top: 300px;
+    margin-top: 350px;
   }
 `;
 const DescBox = styled.div`

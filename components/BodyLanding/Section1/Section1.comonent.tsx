@@ -6,12 +6,12 @@ const Container = styled.div`
   flex-direction: column;
   background-color: #000;
   width: 100%;
-  height: 30%;
+  min-width: 420px;
+  height: auto;
   justify-content: flex-start;
   align-items: center;
   @media screen and (max-width: 1000px) {
     width: 100vh;
-    height: 30%;
     justify-content: flex-start;
     align-items: center;
   }

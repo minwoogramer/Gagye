@@ -6,17 +6,12 @@ const Container = styled.div`
   background-color: #000000;
   color: #fff;
   width: 100%;
-  height: 100%;
+  min-width: 420px;
+  height: auto;
   flex-direction: column;
   justify-content: center;
   line-height: 2;
   padding: 0;
-  @media screen and (max-width: 1000px) {
-    height: 100vw;
-  }
-  @media screen and (max-width: 660px) {
-    height: 100vw;
-  }
 `;
 const Title = styled.span`
   font-size: 40px;

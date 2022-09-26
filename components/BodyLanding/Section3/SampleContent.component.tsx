@@ -5,7 +5,8 @@ const Container = styled.div`
   display: flex;
   background-color: #000;
   width: 100%;
-  height: 30%;
+  min-width: 420px;
+  height: auto;
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 1000px) {
@@ -14,7 +15,6 @@ const Container = styled.div`
     margin-top: 0px;
   }
   @media screen and (max-width: 400px) {
-    padding-top: 50px;
   }
 `;
 const SampleBox = styled.div``;
@@ -23,30 +23,14 @@ export const SampleContent: FC = () => {
     <Container>
       <SampleBox>
         <Img
-          src="/SampleImg1.png"
+          src="/Sample1.png"
           width={236}
           height={140}
           alt="Column"
           layout="intrinsic"
         />
         <Img
-          src="/SampleImg2.png"
-          width={236}
-          height={140}
-          alt="Column"
-          layout="intrinsic"
-        />
-      </SampleBox>
-      <SampleBox>
-        <Img
-          src="/SampleImg3.png"
-          width={236}
-          height={140}
-          alt="Column"
-          layout="intrinsic"
-        />
-        <Img
-          src="/SampleImg4.png"
+          src="/Sample2.png"
           width={236}
           height={140}
           alt="Column"
@@ -55,30 +39,14 @@ export const SampleContent: FC = () => {
       </SampleBox>
       <SampleBox>
         <Img
-          src="/SampleImg5.png"
+          src="/Sample3.png"
           width={236}
           height={140}
           alt="Column"
           layout="intrinsic"
         />
         <Img
-          src="/SampleImg6.png"
-          width={236}
-          height={140}
-          alt="Column"
-          layout="intrinsic"
-        />
-      </SampleBox>
-      <SampleBox>
-        <Img
-          src="/SampleImg7.png"
-          width={236}
-          height={140}
-          alt="Column"
-          layout="intrinsic"
-        />
-        <Img
-          src="/SampleImg8.png"
+          src="/Sample4.png"
           width={236}
           height={140}
           alt="Column"
@@ -87,14 +55,46 @@ export const SampleContent: FC = () => {
       </SampleBox>
       <SampleBox>
         <Img
-          src="/SampleImg9.png"
+          src="/Sample5.png"
           width={236}
           height={140}
           alt="Column"
           layout="intrinsic"
         />
         <Img
-          src="/SampleImg10.png"
+          src="/Sample6.png"
+          width={236}
+          height={140}
+          alt="Column"
+          layout="intrinsic"
+        />
+      </SampleBox>
+      <SampleBox>
+        <Img
+          src="/Sample7.png"
+          width={236}
+          height={140}
+          alt="Column"
+          layout="intrinsic"
+        />
+        <Img
+          src="/Sample8.png"
+          width={236}
+          height={140}
+          alt="Column"
+          layout="intrinsic"
+        />
+      </SampleBox>
+      <SampleBox>
+        <Img
+          src="/Sample9.png"
+          width={236}
+          height={140}
+          alt="Column"
+          layout="intrinsic"
+        />
+        <Img
+          src="/Sample10.png"
           width={236}
           height={140}
           alt="Column"
