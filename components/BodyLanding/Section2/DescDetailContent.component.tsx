@@ -19,7 +19,7 @@ const Title = styled.span`
 `;
 
 const ImgBox = styled.div`
-  margin-top: 100px;
+  margin-top: 120px;
   @media screen and (max-width: 1370px) {
     margin-top: 200px;
   }
