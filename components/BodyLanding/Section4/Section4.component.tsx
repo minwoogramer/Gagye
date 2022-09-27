@@ -13,8 +13,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 200px;
-  @media screen and (max-width: 1000px) {
-    margin-top: 250px;
+  @media screen and (max-width: 1120px) {
+    margin-top: 200px;
     width: 100vh;
   }
   @media screen and (max-width: 660px) {
