@@ -83,9 +83,9 @@ export const DescMetaverseContent: FC = () => {
           interiors, that are just perfect for the Metaverse platforms. Each of
           our models fabricated by architects contains a package of
           high-fidelity 3D files and the required model data to build in both
-          the virtual and real world. Let’s dunk into our favourite doughnuts in
-          the metaverse. Take your favourite dough hut from virtual and build it
-          real. Yes, it’s possible with our NFT.
+          the virtual and real world. Let’s dunk into our favorite doughnuts in
+          the metaverse. Do not stop!! Take your favorite doughnut from virtual
+          and build it real. Yes, it’s possible with our NFT.
         </Desc>
       </DescBox>
 

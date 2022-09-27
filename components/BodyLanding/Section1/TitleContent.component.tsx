@@ -1,6 +1,5 @@
 import { FC } from "react";
 import styled from "styled-components";
-import Img from "next/image";
 const Container = styled.div`
   display: flex;
   background-color: #ebecea;
