@@ -40,7 +40,7 @@ export const DescWhatContent: FC = () => {
           on each detail of it. There are almost more than 30 architectural
           elements in each Gagye. Five of the element properties are chosen as
           variables and 50 unique Gagye’s are generated. The element properties
-          include Wall Colour, Column Color, Roof colour and design, Materials,
+          include Wall Color, Column Color, Roof color and design, Materials,
           and Outdoor elements. Choosing the Donut Gagye from the following five
           flavours of donuts (chocolate, vanilla, strawberry, maple and sugar)
           represents you and can also make you know yourself better.
