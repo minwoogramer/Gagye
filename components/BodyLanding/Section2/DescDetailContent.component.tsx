@@ -52,9 +52,9 @@ export const DescDetailContent: FC = () => {
           be difficult not to stress in modern society, as this is certainly an
           unavoidable part nowadays. Therefore, happiness should be one of the
           most important values to consider, and our Donut Gagye NFT can be a
-          key to making your web 3.0 world a more valuable memory. Let us find
-          out happier memories of your childhood through our favorite foods.
-          moments when you ate doughnuts. Recall happy So, what would you need?
+          key to making your web 3.0 world a more valuable memory. Recall happy
+          moments when you ate doughnuts. Let us find out happier memories of
+          your childhood through our favorite foods. So, what would you need?
           Donut Gagye, of course!
         </Desc>
       </DescBox>
