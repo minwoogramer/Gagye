@@ -20,7 +20,7 @@ const Container = styled.div`
   @media screen and (max-width: 660px) {
     margin-top: 300px;
   }
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 450px) {
     margin-top: 500px;
     padding-top: 20px;
   }
