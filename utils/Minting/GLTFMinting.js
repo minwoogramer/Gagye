@@ -40,9 +40,11 @@ export const MintingStart2 = async ({ address }) => {
 };
 export const GLTFCurrentSupply = async () => {
   const totalMinted = await GLTFcontract.totalSupply();
-  if (typeof totalMinted == "number") return totalMinted;
+  const currentSP = 50 - totalMinted;
+  if (typeof totalMinted == "number") return currentSP;
 };
 export const SKPCurrentSupply = async () => {
   const totalMinted = await SKPcontract.totalSupply();
-  if (typeof totalMinted == "number") return totalMinted;
+  const currentSP = 50 - totalMinted;
+  if (typeof totalMinted == "number") return currentSP;
 };
