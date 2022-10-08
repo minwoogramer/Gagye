@@ -1,8 +1,13 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
-import { MintingStart1, MintingStart2 } from "../../utils/Minting/GLTFMinting";
+import {
+  GLTFCurrentSupply,
+  MintingStart1,
+  MintingStart2,
+  SKPCurrentSupply,
+} from "../../utils/Minting/GLTFMinting";
 import { useRecoilValue } from "recoil";
-import { WalletInfo } from "../../utils/Atoms/atoms";
+import { MintingTimeInfo, WalletInfo } from "../../utils/Atoms/atoms";
 const MintingBoxContainer = styled.div`
   display: flex;
   background-color: black;
@@ -122,6 +127,16 @@ const WhenDateTitle = styled.span`
 
 export const MintContent: FC = () => {
   const address: any = useRecoilValue(WalletInfo);
+  const remainTime = useRecoilValue(MintingTimeInfo);
+  const [GLTFSupply, setGLTFSupply] = useState<any>(50);
+  const [SKPSupply, setSKPSupply] = useState<any>(50);
+  useEffect(() => {
+    const init = async () => {
+      setGLTFSupply(await GLTFCurrentSupply());
+      setSKPSupply(await SKPCurrentSupply());
+    };
+    init();
+  }, []);
   return (
     <MintingBoxContainer>
       <MintingBoxChildContainer>
@@ -134,12 +149,15 @@ export const MintContent: FC = () => {
               <MintTitleText>For Metaverse (.GLTF)</MintTitleText>
             </MintTitleBox>
             <SupplyBox>
-              <SupplyText>50 / 50</SupplyText>
+              <SupplyText>{GLTFSupply} / 50</SupplyText>
               <MintingFee>0.02ETH + Gas</MintingFee>
               <Btn
                 onClick={() => {
-                  // alert("Minting, DonutGagye, will come on October 21!");
-                  MintingStart1(address);
+                  if (remainTime <= 0) {
+                    MintingStart1(address);
+                  } else {
+                    alert("Minting, DonutGagye, will come on October 21!");
+                  }
                 }}
               >
                 Mint for Metaverse
@@ -151,12 +169,15 @@ export const MintContent: FC = () => {
               <MintTitleText>For Multi-purpose (.SKP)</MintTitleText>
             </MintTitleBox>
             <SupplyBox>
-              <SupplyText>50 / 50</SupplyText>
+              <SupplyText>{SKPSupply} / 50</SupplyText>
               <MintingFee>0.5ETH + Gas</MintingFee>
               <Btn
                 onClick={() => {
-                  // alert("Minting, DonutGagye, will come on October 21!");
-                  MintingStart2(address);
+                  if (remainTime <= 0) {
+                    MintingStart2(address);
+                  } else {
+                    alert("Minting, DonutGagye, will come on October 21!");
+                  }
                 }}
               >
                 Mint for Multi-purpose

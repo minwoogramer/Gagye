@@ -5,17 +5,15 @@ import dotenv from "dotenv";
 dotenv.config();
 const GLTFMintAddress = process.env.CONTRACT_ADDRESS1;
 const SKPMintAddress = process.env.CONTRACT_ADDRESS2;
+const provider = new ethers.providers.Web3Provider(window.ethereum);
+const signer = provider.getSigner();
+const GLTFcontract = new ethers.Contract(GLTFMintAddress, GLTFabi, signer);
+const SKPcontract = new ethers.Contract(SKPMintAddress, SKPabi, signer);
+
 export const MintingStart1 = async ({ address }) => {
   if (address != "") {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = provider.getSigner();
-    const contract = new ethers.Contract(
-      "0x44a38729541d7739Ba9c32b439bBb92ae72a88e1",
-      GLTFabi,
-      signer
-    );
     try {
-      const tx = await contract.publicmint(1, {
+      const tx = await GLTFcontract.publicmint(1, {
         value: ethers.utils.parseEther((0.02).toString()),
       });
       const res = await tx.wait();
@@ -29,11 +27,8 @@ export const MintingStart1 = async ({ address }) => {
 //this function need to Contract Address, ABI , signer
 export const MintingStart2 = async ({ address }) => {
   if (address != "") {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = provider.getSigner();
-    const contract = new ethers.Contract(SKPMintAddress, SKPabi, signer);
     try {
-      const tx = await contract.publicmint(BigNumber.from(1), {
+      const tx = await SKPcontract.publicmint(BigNumber.from(1), {
         value: ethers.utils.parseEther((0.5).toString()),
       });
       const res = await tx.wait();
@@ -42,4 +37,12 @@ export const MintingStart2 = async ({ address }) => {
       console.log("error", err);
     }
   }
+};
+export const GLTFCurrentSupply = async () => {
+  const totalMinted = await GLTFcontract.totalSupply();
+  if (typeof totalMinted == "number") return totalMinted;
+};
+export const SKPCurrentSupply = async () => {
+  const totalMinted = await SKPcontract.totalSupply();
+  if (typeof totalMinted == "number") return totalMinted;
 };

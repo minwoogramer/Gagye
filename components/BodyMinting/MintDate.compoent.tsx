@@ -2,6 +2,8 @@ import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import duration from "dayjs/plugin/duration";
 import * as dayjs from "dayjs";
+import { useRecoilState } from "recoil";
+import { MintingTimeInfo } from "../../utils/Atoms/atoms";
 dayjs.extend(duration);
 const MintingDateContainer = styled.div`
   display: flex;
@@ -61,7 +63,7 @@ export const MintDate: FC = () => {
   const [H, setH] = useState(0);
   const [M, setM] = useState(0);
   const [S, setS] = useState(0);
-
+  const [remainTime, setRemainTime] = useRecoilState(MintingTimeInfo);
   const Timer = () => {
     let date = dayjs.default("2022-10-21");
     //설정한 날짜
@@ -79,6 +81,7 @@ export const MintDate: FC = () => {
     let date = dayjs.default("2022-10-21");
     let now = dayjs.default();
     let MintingTime = date.diff(now);
+    setRemainTime(MintingTime);
     const interval = setInterval(Timer, 1000);
     if (MintingTime < 0) return clearInterval(interval);
   }, []);
