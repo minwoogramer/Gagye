@@ -1,7 +1,6 @@
 import { ethers } from 'ethers'
 import Web3Modal from 'web3modal'
 import WalletConnectProvider from '@walletconnect/web3-provider'
-import { useEffect } from 'react'
 
 const providerOptions = {
   walletconnect: {
@@ -9,11 +8,10 @@ const providerOptions = {
     cacheProvider: true,
     options: {
       appName: 'web3Modal ',
-      infuraId: 'https://ropsten.infura.io/v3/f205e2d61653432c996724150f59c1e3',
+      infuraId: 'https://goerli.infura.io/v3/f205e2d61653432c996724150f59c1e3',
       //test Network
-      darkMode: true, // required
     },
-    network: 'ropsten',
+    network: 'goerli',
   },
 }
 
@@ -25,7 +23,7 @@ export const ConnectWallet = async (
   account: string,
 ) => {
   const web3Modal = new Web3Modal({
-    network: 'ropsten',
+    network: 'goerli',
     cacheProvider: true,
     providerOptions,
   })
@@ -52,13 +50,12 @@ export const DisconnectWallet = async (setAccount: {
   const web3Modal = new Web3Modal({
     cacheProvider: true,
     providerOptions,
-    theme: 'dark',
   })
   try {
     web3Modal.clearCachedProvider()
     setAccount('')
     if (typeof window !== undefined) {
-      localStorage.setItem('account', '')
+      localStorage.removeItem('account')
     }
   } catch (error) {
     console.log(error)

@@ -1,31 +1,20 @@
-/**
- *  This script will calculate the constructor arguments for BoredApe.sol and deploy it.
- *  After deploying, you can access the contract on etherscan.io with the deployed contract address.
- */
-
+require("@nomiclabs/hardhat-etherscan");
 const hre = require("hardhat");
-const { MerkleTree } = require("merkletreejs");
 const keccak256 = require("keccak256");
-
+const { MerkleTree } = require("merkletreejs");
 const BASE_URI = "ipfs://QmeudsRUJT8ijjkGznYgb3DCuHJzHPU61ESnZguEJzNRW3/";
 
 async function main() {
-  // Calculate merkle root from the whitelist array
   const leafNodes = ["0x596fDcDa93bEa4b67C7617aB3524de9191d8Cd6f"].map((addr) =>
     keccak256(addr)
   );
   const merkleTree = new MerkleTree(leafNodes, keccak256, { sortPairs: true });
   const root = merkleTree.getRoot();
 
-  // Deploy the contract
-  const DonutGagyeGLTF = await hre.ethers.getContractFactory(
-    "DonutGagyeGLTFNFT"
-  );
-  const donutGagyeGLTF = await DonutGagyeGLTF.deploy(BASE_URI, root);
-
-  await donutGagyeGLTF.deployed();
-
-  console.log("donutGagyeGLTF deployed to:", donutGagyeGLTF.address);
+  await hre.run("verify:verify", {
+    address: "0x7dBb9b6EC0A67E8577D7907504A0d1a464707c0F",
+    constructorArguments: [BASE_URI, root],
+  });
 }
 
 // We recommend this pattern to be able to use async/await everywhere

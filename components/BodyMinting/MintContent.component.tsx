@@ -1,6 +1,6 @@
 import { FC, useEffect } from "react";
 import styled from "styled-components";
-import { MintingStart } from "../../utils/Minting/GLTFMinting";
+import { MintingStart1, MintingStart2 } from "../../utils/Minting/GLTFMinting";
 import { useRecoilValue } from "recoil";
 import { WalletInfo } from "../../utils/Atoms/atoms";
 const MintingBoxContainer = styled.div`
@@ -138,8 +138,8 @@ export const MintContent: FC = () => {
               <MintingFee>0.02ETH + Gas</MintingFee>
               <Btn
                 onClick={() => {
-                  alert("Minting, DonutGagye, will come on October 21!");
-                  //  MintingStart(address);
+                  // alert("Minting, DonutGagye, will come on October 21!");
+                  MintingStart1(address);
                 }}
               >
                 Mint for Metaverse
@@ -155,8 +155,8 @@ export const MintContent: FC = () => {
               <MintingFee>0.5ETH + Gas</MintingFee>
               <Btn
                 onClick={() => {
-                  alert("Minting, DonutGagye, will come on October 21!");
-                  //  MintingStart(address);
+                  // alert("Minting, DonutGagye, will come on October 21!");
+                  MintingStart2(address);
                 }}
               >
                 Mint for Multi-purpose

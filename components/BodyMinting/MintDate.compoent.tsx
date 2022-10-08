@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import duration from "dayjs/plugin/duration";
-import { useRecoilState } from "recoil";
 import * as dayjs from "dayjs";
 dayjs.extend(duration);
 const MintingDateContainer = styled.div`

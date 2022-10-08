@@ -97,7 +97,7 @@ export const HeadWallet: FC = () => {
         console.log("연결성공");
       }
     } else {
-      if (account == "" && localStorage.getItem("account") == "") {
+      if (!account) {
         router.push("/");
       }
     }

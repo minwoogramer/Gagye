@@ -7,7 +7,7 @@ const hre = require("hardhat");
 const { MerkleTree } = require("merkletreejs");
 const keccak256 = require("keccak256");
 
-const BASE_URI = "ipfs://QmeudsRUJT8ijjkGznYgb3DCuHJzHPU61ESnZguEJzNRW3/";
+const BASE_URI = "ipfs://Qmb5A1fFECM2iFHgUioii2khT814nCi6VU9aHXHHqNxHCK/";
 
 async function main() {
   // Calculate merkle root from the whitelist array
@@ -18,14 +18,12 @@ async function main() {
   const root = merkleTree.getRoot();
 
   // Deploy the contract
-  const DonutGagyeGLTF = await hre.ethers.getContractFactory(
-    "DonutGagyeGLTFNFT"
-  );
-  const donutGagyeGLTF = await DonutGagyeGLTF.deploy(BASE_URI, root);
+  const DonutGagyeSKP = await hre.ethers.getContractFactory("DonutGagyeSKPNFT");
+  const donutGagyeSKP = await DonutGagyeSKP.deploy(BASE_URI, root);
 
-  await donutGagyeGLTF.deployed();
+  await donutGagyeSKP.deployed();
 
-  console.log("donutGagyeGLTF deployed to:", donutGagyeGLTF.address);
+  console.log("DonutGagyeSKP:", donutGagyeSKP.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

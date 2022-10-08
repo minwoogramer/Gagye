@@ -1,4 +1,4 @@
-const GLTFabi = [
+const SKPabi = [
   {
     inputs: [
       {
@@ -10,6 +10,11 @@ const GLTFabi = [
         internalType: "bytes32",
         name: "merkleroot",
         type: "bytes32",
+      },
+      {
+        internalType: "address",
+        name: "_proxyRegistryAddress",
+        type: "address",
       },
     ],
     stateMutability: "nonpayable",
@@ -214,7 +219,7 @@ const GLTFabi = [
     outputs: [
       {
         internalType: "bool",
-        name: "isOperator",
+        name: "",
         type: "bool",
       },
     ],
@@ -236,7 +241,7 @@ const GLTFabi = [
   },
   {
     inputs: [],
-    name: "isPublicMintEnabled",
+    name: "isPublicEnabled",
     outputs: [
       {
         internalType: "bool",
@@ -540,19 +545,6 @@ const GLTFabi = [
   {
     inputs: [
       {
-        internalType: "bool",
-        name: "isPublicMintEnabled_",
-        type: "bool",
-      },
-    ],
-    name: "setIsPublicMintEnabled",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
         internalType: "bytes32",
         name: "merkleroot",
         type: "bytes32",
@@ -572,6 +564,19 @@ const GLTFabi = [
       },
     ],
     name: "setNotRevealedURI",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "bool",
+        name: "isPublicEnabled_",
+        type: "bool",
+      },
+    ],
+    name: "setisPublicEnabled",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -737,5 +742,4 @@ const GLTFabi = [
     type: "function",
   },
 ];
-
-export default GLTFabi;
+export default SKPabi;
