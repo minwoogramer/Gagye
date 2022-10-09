@@ -134,6 +134,9 @@ export const MintContent: FC = () => {
     const init = async () => {
       setGLTFSupply(await GLTFCurrentSupply());
       setSKPSupply(await SKPCurrentSupply());
+      console.log(GLTFSupply, SKPSupply, "Supply: ");
+      let a = await GLTFCurrentSupply();
+      console.log(a, "GLTFSupply");
     };
     init();
   }, []);
