@@ -24,7 +24,7 @@ require("@nomicfoundation/hardhat-chai-matchers");
 // Go to https://hardhat.org/config/ to learn more
 ```
 # You need Infura API key, etherscan API key
-## you must change networks testnet to mainnet
+## you must change networks testnet to mainnet When this code Publish
 ## WalletConnect, MitingProcess , Hardhat.config.js
 
 ```javascript
