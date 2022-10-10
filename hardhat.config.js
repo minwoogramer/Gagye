@@ -1,5 +1,3 @@
-const { config } = require("dotenv");
-
 require("dotenv").config();
 require("@nomiclabs/hardhat-ethers");
 require("@nomicfoundation/hardhat-toolbox");

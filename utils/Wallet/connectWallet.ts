@@ -1,15 +1,17 @@
 import { ethers } from 'ethers'
 import Web3Modal from 'web3modal'
 import WalletConnectProvider from '@walletconnect/web3-provider'
-
+require('dotenv').config()
 const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider, // required
     cacheProvider: true,
     options: {
       appName: 'web3Modal ',
-      infuraId: 'https://goerli.infura.io/v3/f205e2d61653432c996724150f59c1e3',
+      infuraId: process.env.GOERLI_RPC_URL,
       //test Network
+      // infuraId:process.env.MAIN_RPC_URL
+      //mainnet
     },
     network: 'goerli',
   },
@@ -24,6 +26,7 @@ export const ConnectWallet = async (
 ) => {
   const web3Modal = new Web3Modal({
     network: 'goerli',
+    //network: 'mainnet',
     cacheProvider: true,
     providerOptions,
   })
