@@ -85,11 +85,11 @@ if you want to use contract
 you need to have 3 items: ContractAccount, ABI, Signer  
 ```
 ##If you want to 3d model minting? follow this process
-1.upload png pinataCloud
-2.upload GLTF pinataCloud
-3.get all CID
-4.Put inside Json file
-5.upload Json file folder
+1. upload png pinataCloud
+2. upload GLTF pinataCloud
+3. get all CID
+4. Put inside Json file
+5. upload Json file folder
 ```json
 {"name":"Test #1",
 "description":"Please put inside Description",
