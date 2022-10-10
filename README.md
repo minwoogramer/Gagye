@@ -71,6 +71,8 @@ module.exports = {
   },
 };
 ```
+
+# Contract Deploy Process
 ```javascript
 npx hardhat compile
 npx hardhat run scripts/deployContract.js
