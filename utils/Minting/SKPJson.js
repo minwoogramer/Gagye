@@ -1,84 +1,24 @@
-const abi = [
+const SKPabi = [
   {
     inputs: [
       {
         internalType: "string",
-        name: "_name",
+        name: "uri",
         type: "string",
       },
       {
-        internalType: "string",
-        name: "_symbol",
-        type: "string",
+        internalType: "bytes32",
+        name: "merkleroot",
+        type: "bytes32",
+      },
+      {
+        internalType: "address",
+        name: "_proxyRegistryAddress",
+        type: "address",
       },
     ],
     stateMutability: "nonpayable",
     type: "constructor",
-  },
-  {
-    inputs: [],
-    name: "ApprovalCallerNotOwnerNorApproved",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "ApprovalQueryForNonexistentToken",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "ApprovalToCurrentOwner",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "ApproveToCaller",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "BalanceQueryForZeroAddress",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "MintToZeroAddress",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "MintZeroQuantity",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "MintedQueryForZeroAddress",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "OwnerQueryForNonexistentToken",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "TransferCallerNotOwnerNorApproved",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "TransferFromIncorrectOwner",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "TransferToNonERC721ReceiverImplementer",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "TransferToZeroAddress",
-    type: "error",
   },
   {
     anonymous: false,
@@ -153,19 +93,6 @@ const abi = [
     anonymous: false,
     inputs: [
       {
-        indexed: false,
-        internalType: "address",
-        name: "account",
-        type: "address",
-      },
-    ],
-    name: "Paused",
-    type: "event",
-  },
-  {
-    anonymous: false,
-    inputs: [
-      {
         indexed: true,
         internalType: "address",
         name: "from",
@@ -188,47 +115,14 @@ const abi = [
     type: "event",
   },
   {
-    anonymous: false,
     inputs: [
       {
-        indexed: false,
         internalType: "address",
-        name: "account",
+        name: "",
         type: "address",
       },
     ],
-    name: "Unpaused",
-    type: "event",
-  },
-  {
-    inputs: [],
-    name: "MAX_SUPPLY",
-    outputs: [
-      {
-        internalType: "uint256",
-        name: "",
-        type: "uint256",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "NUMBER_RESERVED_TOKENS",
-    outputs: [
-      {
-        internalType: "uint256",
-        name: "",
-        type: "uint256",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "WHITELIST_PRICE",
+    name: "_presaleClaimed",
     outputs: [
       {
         internalType: "uint256",
@@ -290,52 +184,6 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [],
-    name: "contractURI",
-    outputs: [
-      {
-        internalType: "string",
-        name: "",
-        type: "string",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "contractURIstr",
-    outputs: [
-      {
-        internalType: "string",
-        name: "",
-        type: "string",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "currentId",
-    outputs: [
-      {
-        internalType: "uint256",
-        name: "",
-        type: "uint256",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "flipWhitelistSaleState",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
     inputs: [
       {
         internalType: "uint256",
@@ -349,42 +197,6 @@ const abi = [
         internalType: "address",
         name: "",
         type: "address",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "uint256",
-        name: "tokenId",
-        type: "uint256",
-      },
-    ],
-    name: "getOwnershipData",
-    outputs: [
-      {
-        components: [
-          {
-            internalType: "address",
-            name: "addr",
-            type: "address",
-          },
-          {
-            internalType: "uint64",
-            name: "startTimestamp",
-            type: "uint64",
-          },
-          {
-            internalType: "bool",
-            name: "burned",
-            type: "bool",
-          },
-        ],
-        internalType: "struct ERC721A.TokenOwnership",
-        name: "",
-        type: "tuple",
       },
     ],
     stateMutability: "view",
@@ -407,7 +219,7 @@ const abi = [
     outputs: [
       {
         internalType: "bool",
-        name: "isOperator",
+        name: "",
         type: "bool",
       },
     ],
@@ -416,12 +228,25 @@ const abi = [
   },
   {
     inputs: [],
-    name: "maxPerTransaction",
+    name: "isPresaleMintEnabled",
     outputs: [
       {
-        internalType: "uint256",
+        internalType: "bool",
         name: "",
-        type: "uint256",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "isPublicEnabled",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
       },
     ],
     stateMutability: "view",
@@ -441,39 +266,29 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [
-      {
-        internalType: "address",
-        name: "to",
-        type: "address",
-      },
+    inputs: [],
+    name: "maxSupply",
+    outputs: [
       {
         internalType: "uint256",
-        name: "numberOfTokens",
+        name: "",
         type: "uint256",
       },
     ],
-    name: "mintReservedToken",
-    outputs: [],
-    stateMutability: "nonpayable",
+    stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [
-      {
-        internalType: "bytes32[]",
-        name: "merkleProof",
-        type: "bytes32[]",
-      },
+    inputs: [],
+    name: "mintPrice",
+    outputs: [
       {
         internalType: "uint256",
-        name: "numberOfTokens",
+        name: "",
         type: "uint256",
       },
     ],
-    name: "mintWhitelist",
-    outputs: [],
-    stateMutability: "payable",
+    stateMutability: "view",
     type: "function",
   },
   {
@@ -497,25 +312,6 @@ const abi = [
         internalType: "string",
         name: "",
         type: "string",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "address",
-        name: "owner",
-        type: "address",
-      },
-    ],
-    name: "numberMinted",
-    outputs: [
-      {
-        internalType: "uint256",
-        name: "",
-        type: "uint256",
       },
     ],
     stateMutability: "view",
@@ -555,13 +351,6 @@ const abi = [
   },
   {
     inputs: [],
-    name: "pause",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [],
     name: "paused",
     outputs: [
       {
@@ -574,23 +363,46 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [],
-    name: "renounceOwnership",
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "quantity_",
+        type: "uint256",
+      },
+      {
+        internalType: "bytes32[]",
+        name: "_proof",
+        type: "bytes32[]",
+      },
+    ],
+    name: "presaleMint",
     outputs: [],
-    stateMutability: "nonpayable",
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "quantity_",
+        type: "uint256",
+      },
+    ],
+    name: "publicmint",
+    outputs: [],
+    stateMutability: "payable",
     type: "function",
   },
   {
     inputs: [],
-    name: "reservedTokensMinted",
-    outputs: [
-      {
-        internalType: "uint256",
-        name: "",
-        type: "uint256",
-      },
-    ],
-    stateMutability: "view",
+    name: "renounceOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
     type: "function",
   },
   {
@@ -608,12 +420,12 @@ const abi = [
   },
   {
     inputs: [],
-    name: "royalty",
+    name: "root",
     outputs: [
       {
-        internalType: "uint256",
+        internalType: "bytes32",
         name: "",
-        type: "uint256",
+        type: "bytes32",
       },
     ],
     stateMutability: "view",
@@ -623,12 +435,12 @@ const abi = [
     inputs: [
       {
         internalType: "uint256",
-        name: "",
+        name: "tokenId",
         type: "uint256",
       },
       {
         internalType: "uint256",
-        name: "_salePrice",
+        name: "salePrice",
         type: "uint256",
       },
     ],
@@ -636,7 +448,7 @@ const abi = [
     outputs: [
       {
         internalType: "address",
-        name: "Receiver",
+        name: "receiver",
         type: "address",
       },
       {
@@ -690,7 +502,7 @@ const abi = [
       },
       {
         internalType: "bytes",
-        name: "_data",
+        name: "data",
         type: "bytes",
       },
     ],
@@ -721,11 +533,11 @@ const abi = [
     inputs: [
       {
         internalType: "string",
-        name: "_newBaseExtension",
+        name: "baseTokenUri_",
         type: "string",
       },
     ],
-    name: "setBaseExtension",
+    name: "setBaseTokenUri",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -733,25 +545,12 @@ const abi = [
   {
     inputs: [
       {
-        internalType: "string",
-        name: "_newBaseURI",
-        type: "string",
+        internalType: "bytes32",
+        name: "merkleroot",
+        type: "bytes32",
       },
     ],
-    name: "setBaseURI",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "string",
-        name: "newuri",
-        type: "string",
-      },
-    ],
-    name: "setContractURI",
+    name: "setMerkleRoot",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -773,24 +572,11 @@ const abi = [
     inputs: [
       {
         internalType: "bool",
-        name: "_reveal",
+        name: "isPublicEnabled_",
         type: "bool",
       },
     ],
-    name: "setReveal",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "bytes32",
-        name: "merkleRoot",
-        type: "bytes32",
-      },
-    ],
-    name: "setWhitelistMerkleRoot",
+    name: "setisPublicEnabled",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -829,28 +615,23 @@ const abi = [
   },
   {
     inputs: [],
-    name: "testReserved",
-    outputs: [
-      {
-        internalType: "bool",
-        name: "",
-        type: "bool",
-      },
-    ],
-    stateMutability: "view",
+    name: "togglePause",
+    outputs: [],
+    stateMutability: "nonpayable",
     type: "function",
   },
   {
     inputs: [],
-    name: "testWithDraw",
-    outputs: [
-      {
-        internalType: "bool",
-        name: "",
-        type: "bool",
-      },
-    ],
-    stateMutability: "view",
+    name: "togglePresale",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "togglePublicSale",
+    outputs: [],
+    stateMutability: "nonpayable",
     type: "function",
   },
   {
@@ -922,64 +703,14 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [],
-    name: "unpause",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
     inputs: [
       {
-        internalType: "uint256",
-        name: "_royalty",
-        type: "uint256",
-      },
-      {
-        internalType: "uint256",
-        name: "_maxPerTransaction",
-        type: "uint256",
-      },
-      {
-        internalType: "uint256",
-        name: "_maxPerWallet",
-        type: "uint256",
-      },
-    ],
-    name: "updateSaleDetails",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "whiteListSaleIsActive",
-    outputs: [
-      {
-        internalType: "bool",
+        internalType: "address",
         name: "",
-        type: "bool",
+        type: "address",
       },
     ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "whitelistMerkleRoot",
-    outputs: [
-      {
-        internalType: "bytes32",
-        name: "",
-        type: "bytes32",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "whitelistMint",
+    name: "walletMints",
     outputs: [
       {
         internalType: "uint256",
@@ -997,5 +728,18 @@ const abi = [
     stateMutability: "nonpayable",
     type: "function",
   },
+  {
+    inputs: [],
+    name: "withdrawWallet",
+    outputs: [
+      {
+        internalType: "address payable",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
 ];
-export default abi;
+export default SKPabi;

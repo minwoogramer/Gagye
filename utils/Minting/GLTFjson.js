@@ -1,7 +1,18 @@
 const GLTFabi = [
   {
-    inputs: [],
-    stateMutability: "payable",
+    inputs: [
+      {
+        internalType: "string",
+        name: "uri",
+        type: "string",
+      },
+      {
+        internalType: "bytes32",
+        name: "merkleroot",
+        type: "bytes32",
+      },
+    ],
+    stateMutability: "nonpayable",
     type: "constructor",
   },
   {
@@ -102,6 +113,25 @@ const GLTFabi = [
     inputs: [
       {
         internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    name: "_presaleClaimed",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
         name: "to",
         type: "address",
       },
@@ -136,6 +166,19 @@ const GLTFabi = [
     type: "function",
   },
   {
+    inputs: [],
+    name: "baseExtension",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [
       {
         internalType: "uint256",
@@ -158,16 +201,29 @@ const GLTFabi = [
     inputs: [
       {
         internalType: "address",
-        name: "owner",
+        name: "_owner",
         type: "address",
       },
       {
         internalType: "address",
-        name: "operator",
+        name: "_operator",
         type: "address",
       },
     ],
     name: "isApprovedForAll",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "isOperator",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "isPresaleMintEnabled",
     outputs: [
       {
         internalType: "bool",
@@ -180,7 +236,7 @@ const GLTFabi = [
   },
   {
     inputs: [],
-    name: "isPubliceMintEnabled",
+    name: "isPublicMintEnabled",
     outputs: [
       {
         internalType: "bool",
@@ -218,19 +274,6 @@ const GLTFabi = [
     type: "function",
   },
   {
-    inputs: [
-      {
-        internalType: "uint256",
-        name: "quantity_",
-        type: "uint256",
-      },
-    ],
-    name: "mint",
-    outputs: [],
-    stateMutability: "payable",
-    type: "function",
-  },
-  {
     inputs: [],
     name: "mintPrice",
     outputs: [
@@ -246,6 +289,19 @@ const GLTFabi = [
   {
     inputs: [],
     name: "name",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "notRevealedUri",
     outputs: [
       {
         internalType: "string",
@@ -290,9 +346,113 @@ const GLTFabi = [
   },
   {
     inputs: [],
+    name: "paused",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "quantity_",
+        type: "uint256",
+      },
+      {
+        internalType: "bytes32[]",
+        name: "_proof",
+        type: "bytes32[]",
+      },
+    ],
+    name: "presaleMint",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "quantity_",
+        type: "uint256",
+      },
+    ],
+    name: "publicmint",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [],
     name: "renounceOwnership",
     outputs: [],
     stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "revealed",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "root",
+    outputs: [
+      {
+        internalType: "bytes32",
+        name: "",
+        type: "bytes32",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "salePrice",
+        type: "uint256",
+      },
+    ],
+    name: "royaltyInfo",
+    outputs: [
+      {
+        internalType: "address",
+        name: "receiver",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "royaltyAmount",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
     type: "function",
   },
   {
@@ -381,11 +541,37 @@ const GLTFabi = [
     inputs: [
       {
         internalType: "bool",
-        name: "isPubliceMintEnabled_",
+        name: "isPublicMintEnabled_",
         type: "bool",
       },
     ],
-    name: "setIsPubliceMintEnabled",
+    name: "setIsPublicMintEnabled",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes32",
+        name: "merkleroot",
+        type: "bytes32",
+      },
+    ],
+    name: "setMerkleRoot",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "string",
+        name: "_notRevealedURI",
+        type: "string",
+      },
+    ],
+    name: "setNotRevealedURI",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -423,10 +609,31 @@ const GLTFabi = [
     type: "function",
   },
   {
+    inputs: [],
+    name: "togglePause",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "togglePresale",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "togglePublicSale",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
     inputs: [
       {
         internalType: "uint256",
-        name: "tokenId_",
+        name: "tokenId",
         type: "uint256",
       },
     ],
