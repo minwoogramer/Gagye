@@ -117,8 +117,8 @@ contract DonutGagyeGLTF is
         // This is a test to ensure we have atleast withdrawn the amount once in production.
         payable(owner()).transfer(address(this).balance);
     }
-    //You can withdraw in etehrscan , use only MetaMask of Owner
-    //this code can't control who does not using metaMask 
+    //외부 컨트랙트가 현재 컨트랙트를 호출하지 못하게 막는것
+    //other contract can't call our contract because of this function
     modifier onlyAccounts () {
         require(msg.sender == tx.origin, "Not allowed origin");
         _;
