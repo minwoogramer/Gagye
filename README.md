@@ -3,7 +3,7 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 
 Try running some of the following tasks:
 
-```shell
+```javascript
 npx hardhat help
 npx hardhat test
 REPORT_GAS=true npx hardhat test
@@ -11,7 +11,7 @@ npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
 
-```shell
+```javascript
 1.yarn add hardhat
 2.yarn add @openzeppelin/contracts
 3.yarn add @nomicfoundation/hardhat-toolbox "@nomicfoundation/hardhat-chai-matchers@^1.0.0" "@nomiclabs/hardhat-ethers@^2.0.0" "@nomiclabs/hardhat-etherscan@^3.0.0" "@types/chai@^4.2.0" "@types/mocha@^9.1.0" "@typechain/ethers-v5@^10.1.0" "@typechain/hardhat@^6.1.2" "chai@^4.2.0" "hardhat-gas-reporter@^1.0.8" "solidity-coverage@^0.8.1"
@@ -23,8 +23,11 @@ require("@nomicfoundation/hardhat-chai-matchers");
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 ```
+#You need Infura API key, etherscan API key
+## you must change networks testnet to mainnet
+## WalletConnect, MitingProcess , Hardhat.config.js
 
-```shell
+```javascript
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
@@ -45,16 +48,12 @@ module.exports = {
   networks: {
     hardhat: {},
     mainnet: {
-      url: "https://mainnet.infura.io/v3/f205e2d61653432c996724150f59c1e3",
-      accounts: [
-        "0x238d199217a32c8829d91dde7e0b15dd6d724fd7c5367e41973441f180e0a893",
-      ],
+      url: process.env.MAIN_RPC_URL,
+      accounts: [process.env.AC],
     },
     georli: {
-      url: "https://goerli.infura.io/v3/f205e2d61653432c996724150f59c1e3",
-      accounts: [
-        "0x238d199217a32c8829d91dde7e0b15dd6d724fd7c5367e41973441f180e0a893",
-      ],
+      url: process.env.GOERLI_RPC_URL,
+      accounts: [process.env.AC],
     },
   },
   paths: {
@@ -68,8 +67,33 @@ module.exports = {
   },
   etherscan: {
     apiKey: {
-      goerli: "AAZIZDH7QXTQAN6HPM4J7K6TEIWETXXP2U",
+      //networks:apiKey
+      goerli: process.env.ETHERSCAN_KEY,
     },
   },
 };
+```
+```javascript
+npx hardhat compile
+npx hardhat run scripts/deployContract.js
+go artifacts
+check contract folder
+copy contract file then
+copy abi code
+mkdir ContractABi.json
+if you want to use contract
+you need to have 3 items: ContractAccount, ABI, Signer  
+```
+##If you want to 3d model minting? follow this process
+1.upload png pinataCloud
+2.upload GLTF pinataCloud
+3.get all CID
+4.Put inside Json file
+5.upload Json file folder
+```json
+{"name":"Test #1",
+"description":"Please put inside Description",
+"image":"ipfs://CID/.png",
+"animation_url":"ipfs://CID" put inside 3D IPFS URL,
+"attributes":[{"trait_type": "Unknown","value": "Unknown"}]}
 ```
