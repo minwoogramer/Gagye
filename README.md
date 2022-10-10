@@ -3,14 +3,12 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 
 Try running some of the following tasks:
 
-```javascript
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
 
+yarn install
+```javascript
+yarn install
+```
+## if you can't run hardhat follow yarn add this bottom code
 ```javascript
 1.yarn add hardhat
 2.yarn add @openzeppelin/contracts
