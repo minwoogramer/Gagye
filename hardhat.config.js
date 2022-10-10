@@ -1,3 +1,5 @@
+const { config } = require("dotenv");
+
 require("dotenv").config();
 require("@nomiclabs/hardhat-ethers");
 require("@nomicfoundation/hardhat-toolbox");
@@ -22,16 +24,12 @@ module.exports = {
   networks: {
     hardhat: {},
     mainnet: {
-      url: "https://mainnet.infura.io/v3/f205e2d61653432c996724150f59c1e3",
-      accounts: [
-        "0x238d199217a32c8829d91dde7e0b15dd6d724fd7c5367e41973441f180e0a893",
-      ],
+      url: process.env.MAIN_RPC_URL,
+      accounts: [process.env.AC],
     },
     georli: {
-      url: "https://goerli.infura.io/v3/f205e2d61653432c996724150f59c1e3",
-      accounts: [
-        "0x238d199217a32c8829d91dde7e0b15dd6d724fd7c5367e41973441f180e0a893",
-      ],
+      url: process.env.GOERLI_RPC_URL,
+      accounts: [process.env.AC],
     },
   },
   paths: {
@@ -45,7 +43,8 @@ module.exports = {
   },
   etherscan: {
     apiKey: {
-      goerli: "AAZIZDH7QXTQAN6HPM4J7K6TEIWETXXP2U",
+      //networks:apiKey
+      goerli: process.env.ETHERSCAN_KEY,
     },
   },
 };

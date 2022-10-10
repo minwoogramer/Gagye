@@ -5,7 +5,7 @@ import {
   MintingStart1,
   MintingStart2,
   SKPCurrentSupply,
-} from "../../utils/Minting/GLTFMinting";
+} from "../../utils/Minting/Minting";
 import { useRecoilValue } from "recoil";
 import { MintingTimeInfo, WalletInfo } from "../../utils/Atoms/atoms";
 const MintingBoxContainer = styled.div`
