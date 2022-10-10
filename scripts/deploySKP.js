@@ -7,7 +7,7 @@ const hre = require("hardhat");
 const { MerkleTree } = require("merkletreejs");
 const keccak256 = require("keccak256");
 
-const BASE_URI = "ipfs://Qmb5A1fFECM2iFHgUioii2khT814nCi6VU9aHXHHqNxHCK/";
+const BASE_URI = "ipfs://QmdkXzTVssRSKgFh1griMRypxHStaVPmjPdYFZgyDRY5Bb/";
 
 async function main() {
   // Calculate merkle root from the whitelist array
@@ -18,8 +18,9 @@ async function main() {
   const root = merkleTree.getRoot();
 
   // Deploy the contract
-  const DonutGagyeSKP = await hre.ethers.getContractFactory("DonutGagyeSKPNFT");
-  const donutGagyeSKP = await DonutGagyeSKP.deploy(BASE_URI, root);
+  const DonutGagyeSKP = await hre.ethers.getContractFactory("DonutGagyeSKP");
+  //   const donutGagyeSKP = await DonutGagyeSKP.deploy(BASE_URI, root);
+  const donutGagyeSKP = await DonutGagyeSKP.deploy(BASE_URI);
 
   await donutGagyeSKP.deployed();
 

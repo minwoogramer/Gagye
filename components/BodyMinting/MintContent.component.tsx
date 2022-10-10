@@ -154,11 +154,12 @@ export const MintContent: FC = () => {
               <MintingFee>0.02ETH + Gas</MintingFee>
               <Btn
                 onClick={() => {
-                  if (remainTime <= 0) {
-                    MintingStart1(address);
-                  } else {
-                    alert("Minting, DonutGagye, will come on October 21!");
-                  }
+                  // if (remainTime <= 0) {
+                  //   MintingStart1(address);
+                  // } else {
+                  //   alert("Minting, DonutGagye, will come on October 21!");
+                  // }
+                  MintingStart1(address);
                 }}
               >
                 Mint for Metaverse

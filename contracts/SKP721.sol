@@ -7,13 +7,13 @@ import "@openzeppelin/contracts/interfaces/IERC2981.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
-contract DonutGagyeGLTFNFT is 
+contract DonutGagyeSKP is 
     ERC721, 
     IERC2981,
     Ownable, 
     ReentrancyGuard
      {
-   //type setting
+   //type setting it is just using convert
     using Strings for uint256;
     using Counters for Counters.Counter;
     //MerkleProof parameter
@@ -22,7 +22,8 @@ contract DonutGagyeGLTFNFT is
     uint256 public mintPrice;
     uint256 public maxSupply;
     uint256 public maxPerWallet;
-     uint256 public royalty = 50; // 50 is divided by 10 in the royalty info function to make 7.5%
+
+    uint256 public royalty = 50; // 50 is divided by 10 in the royalty info function to make 7.5%
     //MitingProcess control
     bool public isPublicEnabled;
     bool public isPresaleMintEnabled;
@@ -44,10 +45,10 @@ contract DonutGagyeGLTFNFT is
     //developer can keep tracking user how many miting on your contract
     Counters.Counter private _tokenIds;
     //developer can Count TokenId use this code
-    constructor(string memory uri, bytes32 merkleroot) ERC721('DouutGagyeGLTF', 'Gagye')
+    constructor(string memory uri) ERC721('DonutSKP', 'Gagye')
      ReentrancyGuard() // A modifier that can prevent reentrancy during certain functions
      {
-        mintPrice = 0.02 ether;
+        mintPrice = 0.5 ether;
         //MiningPirce setting
         maxSupply = 50;
         //maxSupply setting
@@ -55,7 +56,7 @@ contract DonutGagyeGLTFNFT is
         //each walletMints how many
         isPublicEnabled = true;
         //MitingEnabled Check
-        root = merkleroot;
+        // root = merkleroot;
         //use for preminting on merkleroot
         setBaseTokenUri(uri);
         //you can set NFTURI this parameters
@@ -113,7 +114,7 @@ contract DonutGagyeGLTFNFT is
     //이녀석을 통해 오픈씨에서 이미지를 볼 수 있게 됀다.
     //You can See Img on opensea because this function set from tokenURI to OpenSeaTokenURI 
 
-    function withdraw() external onlyOwner {
+        function withdraw() external onlyOwner {
         // This is a test to ensure we have atleast withdrawn the amount once in production.
         payable(owner()).transfer(address(this).balance);
     }
@@ -244,5 +245,3 @@ contract DonutGagyeGLTFNFT is
     }
    
 }
-
-

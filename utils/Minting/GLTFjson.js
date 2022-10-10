@@ -6,11 +6,6 @@ const GLTFabi = [
         name: "uri",
         type: "string",
       },
-      {
-        internalType: "bytes32",
-        name: "merkleroot",
-        type: "bytes32",
-      },
     ],
     stateMutability: "nonpayable",
     type: "constructor",
@@ -236,7 +231,7 @@ const GLTFabi = [
   },
   {
     inputs: [],
-    name: "isPublicMintEnabled",
+    name: "isPublicEnabled",
     outputs: [
       {
         internalType: "bool",
@@ -427,15 +422,28 @@ const GLTFabi = [
     type: "function",
   },
   {
+    inputs: [],
+    name: "royalty",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [
       {
         internalType: "uint256",
-        name: "tokenId",
+        name: "",
         type: "uint256",
       },
       {
         internalType: "uint256",
-        name: "salePrice",
+        name: "_salePrice",
         type: "uint256",
       },
     ],
@@ -443,7 +451,7 @@ const GLTFabi = [
     outputs: [
       {
         internalType: "address",
-        name: "receiver",
+        name: "Receiver",
         type: "address",
       },
       {
@@ -540,19 +548,6 @@ const GLTFabi = [
   {
     inputs: [
       {
-        internalType: "bool",
-        name: "isPublicMintEnabled_",
-        type: "bool",
-      },
-    ],
-    name: "setIsPublicMintEnabled",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
         internalType: "bytes32",
         name: "merkleroot",
         type: "bytes32",
@@ -572,6 +567,19 @@ const GLTFabi = [
       },
     ],
     name: "setNotRevealedURI",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "bool",
+        name: "isPublicEnabled_",
+        type: "bool",
+      },
+    ],
+    name: "setisPublicEnabled",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -721,19 +729,6 @@ const GLTFabi = [
     name: "withdraw",
     outputs: [],
     stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "withdrawWallet",
-    outputs: [
-      {
-        internalType: "address payable",
-        name: "",
-        type: "address",
-      },
-    ],
-    stateMutability: "view",
     type: "function",
   },
 ];

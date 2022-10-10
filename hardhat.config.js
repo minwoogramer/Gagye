@@ -18,16 +18,16 @@ module.exports = {
       },
     },
   },
-  defaultNetwork: "mainnet",
+  defaultNetwork: "georli",
   networks: {
     hardhat: {},
     mainnet: {
       url: process.env.MAIN_RPC_URL,
-      accounts: [process.env.AC],
+      accounts: [process.env.PRIVATE_KEY],
     },
     georli: {
       url: process.env.GOERLI_RPC_URL,
-      accounts: [process.env.AC],
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
   paths: {

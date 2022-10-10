@@ -6,16 +6,6 @@ const SKPabi = [
         name: "uri",
         type: "string",
       },
-      {
-        internalType: "bytes32",
-        name: "merkleroot",
-        type: "bytes32",
-      },
-      {
-        internalType: "address",
-        name: "_proxyRegistryAddress",
-        type: "address",
-      },
     ],
     stateMutability: "nonpayable",
     type: "constructor",
@@ -219,7 +209,7 @@ const SKPabi = [
     outputs: [
       {
         internalType: "bool",
-        name: "",
+        name: "isOperator",
         type: "bool",
       },
     ],
@@ -432,15 +422,28 @@ const SKPabi = [
     type: "function",
   },
   {
+    inputs: [],
+    name: "royalty",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [
       {
         internalType: "uint256",
-        name: "tokenId",
+        name: "",
         type: "uint256",
       },
       {
         internalType: "uint256",
-        name: "salePrice",
+        name: "_salePrice",
         type: "uint256",
       },
     ],
@@ -448,7 +451,7 @@ const SKPabi = [
     outputs: [
       {
         internalType: "address",
-        name: "receiver",
+        name: "Receiver",
         type: "address",
       },
       {
@@ -726,19 +729,6 @@ const SKPabi = [
     name: "withdraw",
     outputs: [],
     stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "withdrawWallet",
-    outputs: [
-      {
-        internalType: "address payable",
-        name: "",
-        type: "address",
-      },
-    ],
-    stateMutability: "view",
     type: "function",
   },
 ];
