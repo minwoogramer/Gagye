@@ -87,7 +87,7 @@ export const HeadWallet: FC = () => {
         });
       };
 
-      if (account != "") {
+      if (localStorage.getItem("account")) {
         setTimeout(() => {
           showToast();
         }, 500);
@@ -97,7 +97,7 @@ export const HeadWallet: FC = () => {
         console.log("연결성공");
       }
     } else {
-      if (!account) {
+      if (!localStorage.getItem("account")) {
         router.push("/");
       }
     }

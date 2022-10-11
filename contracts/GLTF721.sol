@@ -172,6 +172,7 @@ contract DonutGagyeGLTF is
          for (uint i = 0; i < quantity_; i++) {
             mintInternal();
         }
+        //this for context can multiple mint user who using mingpage
     }
     function presaleMint(address account, uint256 quantity_, bytes32[] calldata _proof)
     external
