@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 
 import styled from "styled-components";
+import Head from "next/head";
 import { Header } from "../Layouts/Header";
 import { Footer } from "../Layouts/Footer";
 import { BodyLanding } from "../Layouts/BodyLanding";
@@ -29,6 +30,10 @@ const Home: NextPage = () => {
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap"
         rel="stylesheet"
       ></link>
+      <Head>
+        <title>Donut Gagye</title>
+        <meta property="og:title" content="My page title" key="title" />
+      </Head>
       <Header />
       <BodyLanding />
       <Footer />

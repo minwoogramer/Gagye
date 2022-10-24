@@ -19,12 +19,12 @@ async function main() {
     address: "0x1030B1677826Ab5254d2a08D99da879b16A4499c",
     constructorArguments: [BASE_URI],
   });
-  await hre.run("verify:verify", {
-    address: "0x32B3eF57b576A8399a4299D0a83561C598beF402",
-    constructorArguments: [BASE_URI],
-  });
-  //   constructorArguments: [BASE_URI, root],
+  // await hre.run("verify:verify", {
+  //   address: "0x32B3eF57b576A8399a4299D0a83561C598beF402",
+  //   constructorArguments: [BASE_URI],
   // });
+  // //   constructorArguments: [BASE_URI, root],
+  // // });
 }
 
 // We recommend this pattern to be able to use async/await everywhere
