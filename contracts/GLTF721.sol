@@ -22,7 +22,7 @@ contract DonutGagyeGLTF is
     uint256 public mintPrice;
     uint256 public maxSupply;
     uint256 public maxPerWallet;
-     uint256 public royalty = 50; // 50 is divided by 10 in the royalty info function to make 7.5%
+    uint256 public royalty = 50; // 50 is divided by 10 in the royalty info function to make 7.5%
     //MitingProcess control
     bool public isPublicEnabled;
     bool public isPresaleMintEnabled;
@@ -199,7 +199,6 @@ contract DonutGagyeGLTF is
              
         _presaleClaimed[msg.sender] += quantity_;
 
-      
          for (uint i = 0; i < quantity_; i++) {
             mintInternal();
         }
