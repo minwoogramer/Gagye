@@ -36,7 +36,7 @@ export const ConnectWallet = async (
   try {
     console.log(instance, 'instance')
     console.log(providers, 'providers')
-    if (accounts) {
+    if (accounts[0] != '') {
       setAccount(accounts[0])
       console.log(accounts[0])
       let storage: any = localStorage.getItem('account')
@@ -58,8 +58,9 @@ export const DisconnectWallet = async (setAccount: {
     web3Modal.clearCachedProvider()
     setAccount('')
     if (typeof window !== undefined) {
-      localStorage.removeItem('account')
+      localStorage.setItem('account', '')
     }
+    //user go Home if currentPage reloaded when use localStorage.removeItem('account')
   } catch (error) {
     console.log(error)
   }

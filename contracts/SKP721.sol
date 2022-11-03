@@ -7,13 +7,14 @@ import "@openzeppelin/contracts/interfaces/IERC2981.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
-contract DonutGagyeSKPNFT is 
+
+contract DonutGagyeSKP is 
     ERC721, 
     IERC2981,
     Ownable, 
     ReentrancyGuard
      {
-   //type setting
+   //type setting it is just using convert
     using Strings for uint256;
     using Counters for Counters.Counter;
     //MerkleProof parameter
@@ -45,10 +46,10 @@ contract DonutGagyeSKPNFT is
     //developer can keep tracking user how many miting on your contract
     Counters.Counter private _tokenIds;
     //developer can Count TokenId use this code
-    constructor(string memory uri, bytes32 merkleroot) ERC721('DouutGagyeSKP', 'Gagye')
+    constructor(string memory uri) ERC721('DonutSKP', 'Gagye')
      ReentrancyGuard() // A modifier that can prevent reentrancy during certain functions
      {
-        mintPrice = 0.05 ether;
+        mintPrice = 0.5 ether;
         //MiningPirce setting
         maxSupply = 50;
         //maxSupply setting
@@ -56,7 +57,7 @@ contract DonutGagyeSKPNFT is
         //each walletMints how many
         isPublicEnabled = true;
         //MitingEnabled Check
-        root = merkleroot;
+        // root = merkleroot;
         //use for preminting on merkleroot
         setBaseTokenUri(uri);
         //you can set NFTURI this parameters

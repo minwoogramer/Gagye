@@ -1,6 +1,5 @@
 import { FC } from "react";
 import styled from "styled-components";
-import Img from "next/image";
 interface HeadProps {}
 
 const HeaderLogo = styled.div`

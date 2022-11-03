@@ -7,8 +7,8 @@ const hre = require("hardhat");
 const { MerkleTree } = require("merkletreejs");
 const keccak256 = require("keccak256");
 
-const BASE_URI = "ipfs://QmeudsRUJT8ijjkGznYgb3DCuHJzHPU61ESnZguEJzNRW3/";
-
+const BASE_URI = "ipfs://QmdkXzTVssRSKgFh1griMRypxHStaVPmjPdYFZgyDRY5Bb/";
+//put in here 3dMetaData CID
 async function main() {
   // Calculate merkle root from the whitelist array
   const leafNodes = ["0x596fDcDa93bEa4b67C7617aB3524de9191d8Cd6f"].map((addr) =>
@@ -18,10 +18,9 @@ async function main() {
   const root = merkleTree.getRoot();
 
   // Deploy the contract
-  const DonutGagyeGLTF = await hre.ethers.getContractFactory(
-    "DonutGagyeGLTFNFT"
-  );
-  const donutGagyeGLTF = await DonutGagyeGLTF.deploy(BASE_URI, root);
+  const DonutGagyeGLTF = await hre.ethers.getContractFactory("DonutGagyeGLTF");
+  // const donutGagyeGLTF = await DonutGagyeGLTF.deploy(BASE_URI, root);
+  const donutGagyeGLTF = await DonutGagyeGLTF.deploy(BASE_URI);
 
   await donutGagyeGLTF.deployed();
 
