@@ -1,10 +1,9 @@
-import type { NextPage } from "next";
-
 import styled from "styled-components";
 import Head from "next/head";
 import { Header } from "../Layouts/Header";
 import { Footer } from "../Layouts/Footer";
 import { BodyLanding } from "../Layouts/BodyLanding";
+import { NextPage } from "next";
 
 const IndexContainer = styled.div`
   display: flex;

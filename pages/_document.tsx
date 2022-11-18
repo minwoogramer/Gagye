@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import { DocumentContext } from "next/document";
 import { CssBaseline } from "@nextui-org/react";

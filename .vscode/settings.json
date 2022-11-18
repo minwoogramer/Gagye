@@ -1,14 +1,7 @@
 {
     "cSpell.words": [
-        "Fabi",
-        "gasfee",
-        "GLTF",
-        "GLTFNFT",
-        "Metaverse",
-        "mintingpage",
-        "nomicfoundation",
-        "publicmint",
-        "walletconnect"
+        "nextjs",
+        "nextui"
     ],
     "DockerRun.DisableDockerrc": true
 }
