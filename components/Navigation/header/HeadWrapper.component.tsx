@@ -14,9 +14,8 @@ const HeaderContainer = styled.nav`
   width: 100%;
   min-width: 420px;
   height: 100px;
-  justify-content: space-between;
   box-sizing: border-box;
-  background-color: #000;
+  background-color: rgb(255, 255, 255, 1);
   z-index: 1;
   padding-top: 10px;
   padding-bottom: 10px;

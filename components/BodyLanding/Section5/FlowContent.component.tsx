@@ -56,13 +56,7 @@ export const FlowContent: FC = () => {
       </Desc>
       <FlowBox>
         <ImgBox>
-          <Img
-            src="/Last123.png"
-            width={1200}
-            height={600}
-            alt="Column"
-            layout="intrinsic"
-          />
+          <Img src="/Last123.png" width={1200} height={600} alt="Column" />
         </ImgBox>
       </FlowBox>
     </Container>

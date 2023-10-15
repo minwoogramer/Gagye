@@ -1,16 +1,14 @@
-import { ReactElement, useState, useEffect, ReactNode, FC } from "react";
-import { useRouter } from "next/router";
+import { ReactNode, FC } from "react";
 import styled from "styled-components";
 interface ContainerProps {
   children: ReactNode;
 }
 
 const HeaderContainer = styled.div`
-  background-color: #0000;
   display: flex;
   align-items: center;
-  min-width: 1210px;
-  max-width: 1400px;
+  justify-contents: flex-start;
+  margin: 0;
   height: auto;
   @media screen and (max-width: 1600px) {
     min-width: 1210px;
@@ -27,6 +25,6 @@ const HeaderContainer = styled.div`
     width: 100%;
   }
 `;
-export const HeadLChildWrapper: FC<ContainerProps> = ({ children }) => {
+export const HeadLTitleWrapper: FC<ContainerProps> = ({ children }) => {
   return <HeaderContainer>{children}</HeaderContainer>;
 };
