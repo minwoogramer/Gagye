@@ -1,24 +1,16 @@
-import React from "react";
 import { FC } from "react";
 import styled from "styled-components";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import {
-  faDiscord,
-  faInstagram,
-  faTwitter,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Img from "next/image";
 interface FooterProps {}
 
 const FooterContentContainer = styled.div`
   display: flex;
+  flex-direction: column;
   color: #ffffff;
   width: 100%;
 `;
 const FooterContentBox = styled.div`
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: flex-start;
   font-size: 15px;
@@ -33,42 +25,36 @@ const FooterContentBox2 = styled.div`
 const FooterContentText = styled.span`
   margin: 0;
 `;
-const LogoContentUl = styled.ul`
-  display: flex;
-  width: 40%;
-`;
-const LogoContentLi = styled.li`
-  color: #ffff;
-  list-style: none;
-  font-size: 30px;
-`;
 export const FooterContent: FC<FooterProps> = () => {
   return (
     <FooterContentContainer>
+      <Img
+        src="/Wyzrs.png"
+        width={136}
+        height={38.91}
+        alt="logo"
+        layout="fixed"
+      ></Img>
       <FooterContentBox>
         <FooterContentBox2>
+          <FooterContentText>labs@wyzrs.com</FooterContentText>
+          <FooterContentText>www.wyzrs.com</FooterContentText>
+        </FooterContentBox2>
+        <FooterContentBox2>
           <FooterContentText>
-            © 2023 Wyzrs. All rights reserved.
+            Wyzrs is an idea factory to make a positive impact on the building
+            industry by leveraging new and beneficial technologies.
           </FooterContentText>
           <FooterContentText>
-            Terms and Conditions · License Terms · Privacy Policy
+            We do not hesitate to experiment and introduce new things.
+          </FooterContentText>
+        </FooterContentBox2>
+        <FooterContentBox2>
+          <FooterContentText>
+            ⓒ 2022. Wyzrs Co., Ltd. All rights reserved.
           </FooterContentText>
         </FooterContentBox2>
       </FooterContentBox>
-      <LogoContentUl>
-        <LogoContentLi>
-          <FontAwesomeIcon icon={faDiscord} />
-        </LogoContentLi>
-        <LogoContentLi>
-          <FontAwesomeIcon icon={faInstagram} />
-        </LogoContentLi>
-        <LogoContentLi>
-          <FontAwesomeIcon icon={faTwitter} />
-        </LogoContentLi>
-        <LogoContentLi>
-          <FontAwesomeIcon icon={faLinkedin} />
-        </LogoContentLi>
-      </LogoContentUl>
     </FooterContentContainer>
   );
 };

@@ -9,6 +9,7 @@ const HeaderContainer = styled.div`
   background-color: #0000;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   min-width: 1210px;
   max-width: 1400px;
   height: auto;
@@ -23,7 +24,7 @@ const HeaderContainer = styled.div`
     width: 100%;
   }
 
-  @media screen and (max-width: 380px) {
+  @media screen and (max-width: 500px) {
     width: 100%;
   }
 `;

@@ -18,7 +18,6 @@ contract DonutGagyeSKP is
     using Strings for uint256;
     using Counters for Counters.Counter;
     //MerkleProof parameter
-
     bytes32 public root;
    //MintingInfo 
     uint256 public mintPrice;
@@ -63,15 +62,7 @@ contract DonutGagyeSKP is
         setBaseTokenUri(uri);
         //you can set NFTURI this parameters
     }
-     function _baseURI() 
-        internal 
-        view 
-        virtual 
-        override 
-        returns (string memory) 
-    {
-        return baseTokenUri;
-    }
+    
     function setisPublicEnabled(bool isPublicEnabled_) external onlyOwner {
       isPublicEnabled = isPublicEnabled_;
     }

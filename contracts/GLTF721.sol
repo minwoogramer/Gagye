@@ -60,21 +60,16 @@ contract DonutGagyeGLTF is
         setBaseTokenUri(uri);
         //you can set NFTURI this parameters
     }
-     function _baseURI() 
-        internal 
-        view 
-        virtual 
-        override 
-        returns (string memory) 
-    {
-        return baseTokenUri;
-    }
+    
     function setisPublicEnabled(bool isPublicEnabled_) external onlyOwner {
       isPublicEnabled = isPublicEnabled_;
     }
     //use for PublicMintingEnabled
 
    //_를넣는 이유는 들어가는 녀석이 argument라는것을 표시하기위함
+    function setBaseTokenUri(string memory baseTokenUri_) public onlyOwner {
+        baseTokenUri = baseTokenUri_;
+    }
     //you can set BaseTokenUri this function in etherscan when connect MetaMask of Owner
 
      function setNotRevealedURI(string memory _notRevealedURI) public onlyOwner {
@@ -115,11 +110,7 @@ contract DonutGagyeGLTF is
                 )
                 : "";
     }
-    
-    function setBaseTokenUri(string memory baseTokenUri_) public onlyOwner {
-        baseTokenUri = baseTokenUri_;
-    }
-
+    //이녀석을 통해 오픈씨에서 이미지를 볼 수 있게 됀다.
     //You can See Img on opensea because this function set from tokenURI to OpenSeaTokenURI 
 
     function withdraw() external onlyOwner {
